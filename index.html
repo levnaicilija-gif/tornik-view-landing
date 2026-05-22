@@ -22,7 +22,6 @@
   <meta name="twitter:image" content="https://tornikview.com/clouds-hero.jpg">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="preload" as="image" href="/clouds-hero.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +35,7 @@
     "description": "Eight private triplex mountain residences between Tornik ski slopes and the Crni Rzav river, surrounded by pine forest.",
     "image": "https://tornikview.com/clouds-hero.jpg",
     "url": "https://tornikview.com",
-    "telephone": "+381-62-765-765",
+    "telephone": "+381-62-710-1000",
     "email": "stay@tornikview.com",
     "address": {
       "@type": "PostalAddress",
@@ -83,7 +82,7 @@
       -webkit-font-smoothing: antialiased;
     }
     
-    /* ============ HERO WITH PHOTO ============ */
+    /* ============ HERO — CLEAN GRADIENT, NO BACKGROUND IMAGE ============ */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -92,45 +91,29 @@
       align-items: center;
       justify-content: center;
       padding: 60px 24px 80px;
+      background: linear-gradient(180deg, var(--pine-dark) 0%, var(--pine) 60%, var(--brown) 95%, var(--gold) 100%);
       text-align: center;
       overflow: hidden;
     }
     
-    /* Hero background image */
     .hero::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background-image: url('/clouds-hero.jpg');
-      background-size: cover;
-      background-position: center;
-      z-index: 0;
+      top: -50%;
+      right: -25%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(212, 168, 87, 0.08) 0%, transparent 60%);
+      pointer-events: none;
     }
     
-    /* Dark overlay for text readability */
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg,
-        rgba(26, 46, 38, 0.55) 0%,
-        rgba(45, 74, 62, 0.45) 50%,
-        rgba(45, 74, 62, 0.75) 100%);
-      z-index: 1;
-    }
-    
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 800px;
-    }
+    .hero-content { position: relative; z-index: 1; max-width: 800px; }
     
     .logo-mark {
       width: 88px;
       height: 88px;
       margin: 0 auto 36px;
       animation: fadeInDown 1.2s ease-out;
-      filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3));
     }
     
     .logo-mark svg { width: 100%; height: 100%; }
@@ -143,7 +126,6 @@
       margin-bottom: 18px;
       color: var(--cream);
       animation: fadeInUp 1.2s ease-out 0.3s both;
-      text-shadow: 0 4px 30px rgba(0,0,0,0.4);
     }
     
     .location {
@@ -153,7 +135,6 @@
       color: var(--gold);
       margin-bottom: 48px;
       animation: fadeInUp 1.2s ease-out 0.5s both;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
     
     .divider {
@@ -171,12 +152,11 @@
       font-style: italic;
       font-weight: 300;
       color: var(--cream);
-      opacity: 0.95;
+      opacity: 0.9;
       max-width: 640px;
       margin: 0 auto 56px;
       letter-spacing: 0.04em;
       animation: fadeInUp 1.2s ease-out 0.8s both;
-      text-shadow: 0 2px 20px rgba(0,0,0,0.4);
     }
     
     .status {
@@ -184,9 +164,7 @@
       align-items: center;
       gap: 12px;
       padding: 10px 24px;
-      border: 1px solid rgba(212, 168, 87, 0.5);
-      background: rgba(26, 46, 38, 0.4);
-      backdrop-filter: blur(8px);
+      border: 1px solid rgba(212, 168, 87, 0.4);
       border-radius: 100px;
       font-size: 0.75rem;
       letter-spacing: 0.3em;
@@ -217,24 +195,23 @@
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--cream);
-      opacity: 0.85;
+      opacity: 0.7;
       margin-bottom: 18px;
       display: block;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
     
     .signup-form {
       display: flex;
       gap: 6px;
-      background: rgba(26, 46, 38, 0.45);
+      background: rgba(245, 241, 232, 0.06);
       backdrop-filter: blur(10px);
       padding: 5px;
       border-radius: 100px;
-      border: 1px solid rgba(245, 241, 232, 0.2);
+      border: 1px solid rgba(245, 241, 232, 0.12);
       transition: border-color 0.3s ease;
     }
     
-    .signup-form:focus-within { border-color: rgba(212, 168, 87, 0.65); }
+    .signup-form:focus-within { border-color: rgba(212, 168, 87, 0.5); }
     
     .signup-form input {
       flex: 1;
@@ -248,7 +225,7 @@
       min-width: 0;
     }
     
-    .signup-form input::placeholder { color: rgba(245, 241, 232, 0.6); }
+    .signup-form input::placeholder { color: rgba(245, 241, 232, 0.4); }
     
     .signup-form button {
       background: var(--gold);
@@ -277,7 +254,6 @@
       opacity: 0;
       transition: opacity 0.3s ease;
       min-height: 22px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
     
     .signup-message.show { opacity: 1; }
@@ -288,13 +264,11 @@
       left: 50%;
       transform: translateX(-50%);
       color: var(--cream);
-      opacity: 0.7;
+      opacity: 0.5;
       font-size: 0.7rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      z-index: 3;
       animation: fadeIn 2s ease-out 2s both, bounce 2s ease-in-out 3s infinite;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
     
     .scroll-indicator::after {
@@ -304,7 +278,7 @@
       height: 30px;
       background: var(--gold);
       margin: 12px auto 0;
-      opacity: 0.7;
+      opacity: 0.5;
     }
     
     /* ============ CONTENT SECTIONS ============ */
@@ -374,6 +348,31 @@
       letter-spacing: 0.05em;
     }
     
+    /* ============ STORY IMAGE — subtle photo accent ============ */
+    .story-image {
+      max-width: 720px;
+      margin: 64px auto 0;
+      padding: 12px;
+      background: rgba(245, 241, 232, 0.03);
+      border: 1px solid rgba(212, 168, 87, 0.2);
+      border-radius: 2px;
+    }
+    .story-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 1px;
+    }
+    .story-image-caption {
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.7;
+      margin-top: 16px;
+    }
+    
     /* ============ ELEMENTS ============ */
     .elements { background: linear-gradient(180deg, var(--pine-dark) 0%, var(--pine) 100%); }
     .elements-grid {
@@ -407,70 +406,39 @@
       margin: 0 auto;
     }
     
-    /* ============ RIVER SECTION (with photo background) ============ */
-    .river-section {
-      position: relative;
-      background: var(--pine-dark);
-      padding: 0;
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
+    /* ============ RIVER SECTION (with framed photo, NOT background) ============ */
+    .river-section { background: var(--pine-dark); }
+    
+    .river-photo {
+      max-width: 720px;
+      margin: 0 auto 48px;
+      padding: 12px;
+      background: rgba(245, 241, 232, 0.03);
+      border: 1px solid rgba(212, 168, 87, 0.25);
+      border-radius: 2px;
+    }
+    .river-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 1px;
     }
     
-    .river-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url('/images/river-hero.jpg');
-      background-size: cover;
-      background-position: center;
-      z-index: 0;
-    }
-    
-    .river-section::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg,
-        rgba(26, 46, 38, 0.6) 0%,
-        rgba(26, 46, 38, 0.4) 50%,
-        rgba(26, 46, 38, 0.7) 100%);
-      z-index: 1;
-    }
-    
-    .river-content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 120px 24px;
-      text-align: center;
-    }
-    
-    .river-content .section-label,
-    .river-content .section-title,
-    .river-content .section-subtitle {
-      text-shadow: 0 2px 20px rgba(0,0,0,0.4);
-    }
-    
+    .river-stat-block { text-align: center; }
     .river-stat {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(3rem, 8vw, 6rem);
+      font-size: clamp(3rem, 8vw, 5rem);
       font-weight: 400;
       color: var(--gold);
       line-height: 1;
-      margin: 32px 0 12px;
-      text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+      margin-bottom: 12px;
     }
-    
     .river-stat-label {
       font-size: 0.875rem;
       letter-spacing: 0.4em;
       text-transform: uppercase;
       color: var(--cream);
-      opacity: 0.85;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      opacity: 0.7;
     }
     
     /* ============ PROJECT ============ */
@@ -711,9 +679,6 @@
       .location-list li { flex-direction: column; align-items: flex-start; gap: 4px; padding: 16px 0; }
       .location-distance { width: auto; font-size: 1.25rem; }
       .hero { padding: 40px 20px 80px; }
-      .hero::before { background-image: url('/images/clouds-hero-mobile.jpg'); }
-      .river-section::before { background-image: url('/images/river-hero-mobile.jpg'); }
-      .river-content { padding: 80px 20px; }
       .status { padding: 8px 18px; font-size: 0.6875rem; margin-bottom: 40px; }
       .signup-form { flex-direction: column; padding: 8px; border-radius: 20px; }
       .signup-form input { text-align: center; padding: 13px; }
@@ -722,6 +687,7 @@
       .logo-mark { width: 72px; height: 72px; margin-bottom: 28px; }
       .contact-buttons { flex-direction: column; align-items: stretch; }
       .contact-btn { justify-content: center; }
+      .story-image, .river-photo { padding: 8px; margin-top: 48px; }
     }
     
     @media (max-width: 480px) {
@@ -731,7 +697,7 @@
 </head>
 <body>
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ HERO — CLEAN, NO BACKGROUND IMAGE ============ -->
   <section class="hero">
     <div class="hero-content">
       <div class="logo-mark">
@@ -764,7 +730,7 @@
     <div class="scroll-indicator">Discover</div>
   </section>
 
-  <!-- ============ STORY ============ -->
+  <!-- ============ STORY (with subtle clouds photo accent at bottom) ============ -->
   <section class="story">
     <div class="container">
       <p class="section-label">Our Story</p>
@@ -780,6 +746,12 @@
 
         <div class="story-signature">— Tornik View</div>
       </div>
+
+      <!-- Subtle framed photo of the view -->
+      <div class="story-image">
+        <img src="/clouds-hero.jpg" alt="Tornik mountain view from Kobilja Glava, Zlatibor" loading="lazy">
+      </div>
+      <p class="story-image-caption">View from Kobilja Glava · Tornik in the distance</p>
     </div>
   </section>
 
@@ -825,14 +797,23 @@
     </div>
   </section>
 
-  <!-- ============ RIVER SECTION with photo ============ -->
+  <!-- ============ RIVER SECTION — Framed photo, NOT background ============ -->
   <section class="river-section">
-    <div class="river-content">
+    <div class="container">
       <p class="section-label">Crni Rzav</p>
       <h2 class="section-title">A river at your door</h2>
       <p class="section-subtitle">Three hundred metres of pine forest path between the residences and the water.</p>
-      <div class="river-stat">300m</div>
-      <p class="river-stat-label">to the river</p>
+      <div class="section-divider"></div>
+
+      <!-- Subtle framed river photo -->
+      <div class="river-photo">
+        <img src="/river-hero.jpg" alt="Crni Rzav river running near Tornik View, Kobilja Glava" loading="lazy">
+      </div>
+
+      <div class="river-stat-block">
+        <div class="river-stat">300m</div>
+        <p class="river-stat-label">to the river</p>
+      </div>
     </div>
   </section>
 
