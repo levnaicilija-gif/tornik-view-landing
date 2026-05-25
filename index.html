@@ -22,10 +22,32 @@
   <meta name="twitter:image" content="https://tornikview.com/clouds-hero.jpg">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- ============ GOOGLE ANALYTICS 4 WITH CONSENT MODE V2 ============ -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+    if (localStorage.getItem('tv_cookie_consent') === 'accepted') {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4WTM5R9X"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-EX4WTM5R9X', { 'anonymize_ip': true });
+  </script>
 
   <script type="application/ld+json">
   {
@@ -60,7 +82,6 @@
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    
     :root {
       --pine: #2D4A3E;
       --pine-dark: #1a2e26;
@@ -71,7 +92,6 @@
       --slate: #1A1A1A;
       --brown: #8a7250;
     }
-    
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--pine);
@@ -81,8 +101,6 @@
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
-    
-    /* ============ HERO — CLEAN GRADIENT, NO BACKGROUND IMAGE ============ */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -95,7 +113,6 @@
       text-align: center;
       overflow: hidden;
     }
-    
     .hero::before {
       content: '';
       position: absolute;
@@ -106,18 +123,9 @@
       background: radial-gradient(circle, rgba(212, 168, 87, 0.08) 0%, transparent 60%);
       pointer-events: none;
     }
-    
     .hero-content { position: relative; z-index: 1; max-width: 800px; }
-    
-    .logo-mark {
-      width: 88px;
-      height: 88px;
-      margin: 0 auto 36px;
-      animation: fadeInDown 1.2s ease-out;
-    }
-    
+    .logo-mark { width: 88px; height: 88px; margin: 0 auto 36px; animation: fadeInDown 1.2s ease-out; }
     .logo-mark svg { width: 100%; height: 100%; }
-    
     h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(2.75rem, 8vw, 5.5rem);
@@ -127,7 +135,6 @@
       color: var(--cream);
       animation: fadeInUp 1.2s ease-out 0.3s both;
     }
-    
     .location {
       font-size: 0.875rem;
       letter-spacing: 0.5em;
@@ -136,7 +143,6 @@
       margin-bottom: 48px;
       animation: fadeInUp 1.2s ease-out 0.5s both;
     }
-    
     .divider {
       width: 60px;
       height: 1px;
@@ -145,7 +151,6 @@
       margin: 0 auto 48px;
       animation: expandWidth 1.5s ease-out 0.7s both;
     }
-    
     .tagline {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(1.25rem, 2.8vw, 1.75rem);
@@ -158,7 +163,6 @@
       letter-spacing: 0.04em;
       animation: fadeInUp 1.2s ease-out 0.8s both;
     }
-    
     .status {
       display: inline-flex;
       align-items: center;
@@ -173,7 +177,6 @@
       margin-bottom: 56px;
       animation: fadeInUp 1.2s ease-out 1s both;
     }
-    
     .status::before {
       content: '';
       width: 6px;
@@ -182,14 +185,7 @@
       background: var(--gold);
       animation: pulse 2.5s ease-in-out infinite;
     }
-    
-    .signup {
-      width: 100%;
-      max-width: 480px;
-      margin: 0 auto;
-      animation: fadeInUp 1.2s ease-out 1.2s both;
-    }
-    
+    .signup { width: 100%; max-width: 480px; margin: 0 auto; animation: fadeInUp 1.2s ease-out 1.2s both; }
     .signup-label {
       font-size: 0.75rem;
       letter-spacing: 0.3em;
@@ -199,7 +195,6 @@
       margin-bottom: 18px;
       display: block;
     }
-    
     .signup-form {
       display: flex;
       gap: 6px;
@@ -210,477 +205,300 @@
       border: 1px solid rgba(245, 241, 232, 0.12);
       transition: border-color 0.3s ease;
     }
-    
     .signup-form:focus-within { border-color: rgba(212, 168, 87, 0.5); }
-    
     .signup-form input {
-      flex: 1;
-      background: transparent;
-      border: none;
-      padding: 14px 20px;
-      color: var(--cream);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9375rem;
-      outline: none;
-      min-width: 0;
+      flex: 1; background: transparent; border: none; padding: 14px 20px;
+      color: var(--cream); font-family: 'Inter', sans-serif; font-size: 0.9375rem;
+      outline: none; min-width: 0;
     }
-    
     .signup-form input::placeholder { color: rgba(245, 241, 232, 0.4); }
-    
     .signup-form button {
-      background: var(--gold);
-      color: var(--pine);
-      border: none;
-      padding: 12px 28px;
-      border-radius: 100px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8125rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      white-space: nowrap;
+      background: var(--gold); color: var(--pine); border: none;
+      padding: 12px 28px; border-radius: 100px;
+      font-family: 'Inter', sans-serif; font-size: 0.8125rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+      transition: all 0.25s ease; white-space: nowrap;
     }
-    
     .signup-form button:hover { background: var(--gold-light); transform: translateY(-1px); }
     .signup-form button:active { transform: translateY(0); }
     .signup-form button:disabled { opacity: 0.6; cursor: not-allowed; }
-    
     .signup-message {
-      margin-top: 18px;
-      font-size: 0.875rem;
-      color: var(--gold);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      min-height: 22px;
+      margin-top: 18px; font-size: 0.875rem; color: var(--gold);
+      opacity: 0; transition: opacity 0.3s ease; min-height: 22px;
     }
-    
     .signup-message.show { opacity: 1; }
-    
-    /* Honeypot anti-spam — hidden from real users */
     .honeypot {
-      position: absolute !important;
-      left: -9999px !important;
-      width: 1px !important;
-      height: 1px !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
+      position: absolute !important; left: -9999px !important;
+      width: 1px !important; height: 1px !important;
+      opacity: 0 !important; pointer-events: none !important;
     }
-    
     .scroll-indicator {
-      position: absolute;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: var(--cream);
-      opacity: 0.5;
-      font-size: 0.7rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
+      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+      color: var(--cream); opacity: 0.5; font-size: 0.7rem;
+      letter-spacing: 0.3em; text-transform: uppercase;
       animation: fadeIn 2s ease-out 2s both, bounce 2s ease-in-out 3s infinite;
     }
-    
     .scroll-indicator::after {
-      content: '';
-      display: block;
-      width: 1px;
-      height: 30px;
-      background: var(--gold);
-      margin: 12px auto 0;
-      opacity: 0.5;
+      content: ''; display: block; width: 1px; height: 30px;
+      background: var(--gold); margin: 12px auto 0; opacity: 0.5;
     }
-    
-    /* ============ CONTENT SECTIONS ============ */
     section { padding: 120px 24px; position: relative; }
     .container { max-width: 1100px; margin: 0 auto; }
-    
     .section-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 24px;
-      text-align: center;
+      font-size: 0.75rem; letter-spacing: 0.4em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 24px; text-align: center;
     }
-    
     .section-title {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2rem, 5vw, 3.25rem);
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      color: var(--cream);
-      text-align: center;
-      margin-bottom: 16px;
-      line-height: 1.2;
+      font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 400; letter-spacing: 0.08em;
+      color: var(--cream); text-align: center; margin-bottom: 16px; line-height: 1.2;
     }
-    
     .section-subtitle {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.125rem, 2vw, 1.375rem);
-      font-style: italic;
-      font-weight: 300;
-      color: var(--cream);
-      opacity: 0.75;
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 64px;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-style: italic; font-weight: 300;
+      color: var(--cream); opacity: 0.75; text-align: center;
+      max-width: 600px; margin: 0 auto 64px;
     }
-    
     .section-divider {
-      width: 50px;
-      height: 1px;
-      background: var(--gold);
-      opacity: 0.5;
-      margin: 0 auto 48px;
+      width: 50px; height: 1px; background: var(--gold);
+      opacity: 0.5; margin: 0 auto 48px;
     }
-    
-    /* ============ STORY ============ */
     .story { background: var(--pine-dark); }
     .story-text { max-width: 720px; margin: 0 auto; text-align: center; }
     .story-text p {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.125rem, 2vw, 1.375rem);
-      font-weight: 300;
-      line-height: 1.8;
-      color: var(--cream);
-      opacity: 0.85;
-      margin-bottom: 28px;
-      letter-spacing: 0.01em;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85; margin-bottom: 28px; letter-spacing: 0.01em;
     }
     .story-text p:last-child { margin-bottom: 0; }
     .story-signature {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-style: italic;
-      font-size: 1rem;
-      color: var(--gold);
-      margin-top: 48px;
-      letter-spacing: 0.05em;
+      font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+      font-size: 1rem; color: var(--gold); margin-top: 48px; letter-spacing: 0.05em;
     }
-    
-    /* ============ STORY IMAGE — subtle photo accent ============ */
     .story-image {
-      max-width: 720px;
-      margin: 64px auto 0;
-      padding: 12px;
+      max-width: 720px; margin: 64px auto 0; padding: 12px;
       background: rgba(245, 241, 232, 0.03);
-      border: 1px solid rgba(212, 168, 87, 0.2);
-      border-radius: 2px;
+      border: 1px solid rgba(212, 168, 87, 0.2); border-radius: 2px;
     }
-    .story-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 1px;
-    }
+    .story-image img { width: 100%; height: auto; display: block; border-radius: 1px; }
     .story-image-caption {
-      text-align: center;
-      font-size: 0.7rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold);
-      opacity: 0.7;
-      margin-top: 16px;
+      text-align: center; font-size: 0.7rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--gold); opacity: 0.7; margin-top: 16px;
     }
-    
-    /* ============ ELEMENTS ============ */
     .elements { background: linear-gradient(180deg, var(--pine-dark) 0%, var(--pine) 100%); }
     .elements-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 48px;
-      max-width: 1000px;
-      margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 48px; max-width: 1000px; margin: 0 auto;
     }
     .element-card { text-align: center; padding: 32px 16px; }
-    .element-icon {
-      width: 64px; height: 64px;
-      margin: 0 auto 28px;
-      color: var(--gold);
-    }
+    .element-icon { width: 64px; height: 64px; margin: 0 auto 28px; color: var(--gold); }
     .element-title {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--cream);
-      margin-bottom: 20px;
+      font-size: 1.5rem; font-weight: 400; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--cream); margin-bottom: 20px;
     }
     .element-desc {
-      font-size: 0.9375rem;
-      line-height: 1.7;
-      color: var(--cream);
-      opacity: 0.75;
-      max-width: 280px;
-      margin: 0 auto;
+      font-size: 0.9375rem; line-height: 1.7; color: var(--cream);
+      opacity: 0.75; max-width: 280px; margin: 0 auto;
     }
-    
-    /* ============ RIVER SECTION (with framed photo, NOT background) ============ */
     .river-section { background: var(--pine-dark); }
-    
     .river-photo {
-      max-width: 720px;
-      margin: 0 auto 48px;
-      padding: 12px;
+      max-width: 720px; margin: 0 auto 48px; padding: 12px;
       background: rgba(245, 241, 232, 0.03);
-      border: 1px solid rgba(212, 168, 87, 0.25);
-      border-radius: 2px;
+      border: 1px solid rgba(212, 168, 87, 0.25); border-radius: 2px;
     }
-    .river-photo img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 1px;
-    }
-    
+    .river-photo img { width: 100%; height: auto; display: block; border-radius: 1px; }
     .river-stat-block { text-align: center; }
     .river-stat {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(3rem, 8vw, 5rem);
-      font-weight: 400;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 12px;
+      font-size: clamp(3rem, 8vw, 5rem); font-weight: 400;
+      color: var(--gold); line-height: 1; margin-bottom: 12px;
     }
     .river-stat-label {
-      font-size: 0.875rem;
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      color: var(--cream);
-      opacity: 0.7;
+      font-size: 0.875rem; letter-spacing: 0.4em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.7;
     }
-    
-    /* ============ PROJECT ============ */
     .project { background: var(--pine); }
     .project-intro { max-width: 700px; margin: 0 auto 64px; text-align: center; }
     .project-intro p {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.125rem, 2vw, 1.375rem);
-      font-weight: 300;
-      line-height: 1.8;
-      color: var(--cream);
-      opacity: 0.85;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85;
     }
     .project-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 48px 0;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 32px; max-width: 900px; margin: 0 auto; padding: 48px 0;
       border-top: 1px solid rgba(212, 168, 87, 0.2);
       border-bottom: 1px solid rgba(212, 168, 87, 0.2);
     }
     .stat { text-align: center; }
     .stat-number {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2.5rem, 5vw, 3.75rem);
-      font-weight: 400;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 12px;
+      font-size: clamp(2.5rem, 5vw, 3.75rem); font-weight: 400;
+      color: var(--gold); line-height: 1; margin-bottom: 12px;
     }
     .stat-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--cream);
-      opacity: 0.7;
+      font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.7;
     }
-    
-    /* ============ LOCATION ============ */
     .location-sec { background: var(--pine-dark); }
     .location-list { max-width: 600px; margin: 0 auto; list-style: none; }
     .location-list li {
-      display: flex;
-      align-items: center;
-      padding: 20px 0;
+      display: flex; align-items: center; padding: 20px 0;
       border-bottom: 1px solid rgba(245, 241, 232, 0.08);
-      font-size: 1rem;
-      color: var(--cream);
+      font-size: 1rem; color: var(--cream);
     }
     .location-list li:last-child { border-bottom: none; }
     .location-distance {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.5rem;
-      color: var(--gold);
-      width: 100px;
-      flex-shrink: 0;
+      font-size: 1.5rem; color: var(--gold); width: 100px; flex-shrink: 0;
     }
     .location-place { flex: 1; opacity: 0.9; letter-spacing: 0.02em; }
-    
-    /* ============ INTEREST FORM ============ */
     .interest { background: linear-gradient(180deg, var(--pine) 0%, var(--pine-light) 100%); }
     .interest-form { max-width: 560px; margin: 0 auto; }
     .form-row { margin-bottom: 20px; }
     .form-row label {
-      display: block;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--cream);
-      opacity: 0.7;
-      margin-bottom: 10px;
+      display: block; font-size: 0.7rem; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--cream); opacity: 0.7; margin-bottom: 10px;
     }
-    .form-row input,
-    .form-row select,
-    .form-row textarea {
-      width: 100%;
-      background: rgba(245, 241, 232, 0.06);
-      border: 1px solid rgba(245, 241, 232, 0.12);
-      border-radius: 8px;
-      padding: 14px 18px;
-      color: var(--cream);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9375rem;
-      outline: none;
-      transition: border-color 0.25s ease;
+    .form-row input, .form-row select, .form-row textarea {
+      width: 100%; background: rgba(245, 241, 232, 0.06);
+      border: 1px solid rgba(245, 241, 232, 0.12); border-radius: 8px;
+      padding: 14px 18px; color: var(--cream); font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem; outline: none; transition: border-color 0.25s ease;
     }
-    .form-row input:focus,
-    .form-row select:focus,
-    .form-row textarea:focus { border-color: rgba(212, 168, 87, 0.55); }
+    .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+      border-color: rgba(212, 168, 87, 0.55);
+    }
     .form-row select option { background: var(--pine-dark); color: var(--cream); }
     .form-row textarea { resize: vertical; min-height: 100px; font-family: 'Inter', sans-serif; }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form-submit {
-      width: 100%;
-      background: var(--gold);
-      color: var(--pine);
-      border: none;
-      padding: 16px 32px;
-      border-radius: 100px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8125rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      margin-top: 12px;
+      width: 100%; background: var(--gold); color: var(--pine); border: none;
+      padding: 16px 32px; border-radius: 100px;
+      font-family: 'Inter', sans-serif; font-size: 0.8125rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer;
+      transition: all 0.25s ease; margin-top: 12px;
     }
     .form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
     .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
     .form-message {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 0.875rem;
-      color: var(--gold);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      min-height: 22px;
+      margin-top: 20px; text-align: center; font-size: 0.875rem; color: var(--gold);
+      opacity: 0; transition: opacity 0.3s ease; min-height: 22px;
     }
     .form-message.show { opacity: 1; }
     .contact-direct {
-      text-align: center;
-      margin-top: 48px;
-      padding-top: 48px;
+      text-align: center; margin-top: 48px; padding-top: 48px;
       border-top: 1px solid rgba(245, 241, 232, 0.1);
     }
     .contact-direct p {
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--cream);
-      opacity: 0.6;
-      margin-bottom: 20px;
+      font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.6; margin-bottom: 20px;
     }
     .contact-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .contact-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 24px;
+      display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px;
       background: rgba(245, 241, 232, 0.06);
-      border: 1px solid rgba(245, 241, 232, 0.15);
-      border-radius: 100px;
-      color: var(--cream);
-      text-decoration: none;
-      font-size: 0.8125rem;
-      letter-spacing: 0.1em;
-      transition: all 0.25s ease;
+      border: 1px solid rgba(245, 241, 232, 0.15); border-radius: 100px;
+      color: var(--cream); text-decoration: none;
+      font-size: 0.8125rem; letter-spacing: 0.1em; transition: all 0.25s ease;
     }
     .contact-btn:hover {
       background: rgba(212, 168, 87, 0.15);
-      border-color: var(--gold);
-      color: var(--gold);
+      border-color: var(--gold); color: var(--gold);
     }
     .contact-btn svg { width: 16px; height: 16px; }
-    
-    /* ============ FOOTER ============ */
     footer {
-      background: var(--pine-dark);
-      padding: 64px 24px 40px;
-      text-align: center;
-      border-top: 1px solid rgba(212, 168, 87, 0.15);
+      background: var(--pine-dark); padding: 64px 24px 40px;
+      text-align: center; border-top: 1px solid rgba(212, 168, 87, 0.15);
     }
     .footer-logo { width: 48px; height: 48px; margin: 0 auto 24px; opacity: 0.8; }
     .footer-brand {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      letter-spacing: 0.2em;
-      color: var(--cream);
-      margin-bottom: 8px;
+      font-size: 1.5rem; font-weight: 400; letter-spacing: 0.2em;
+      color: var(--cream); margin-bottom: 8px;
     }
     .footer-tagline {
-      font-size: 0.75rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold);
-      opacity: 0.8;
-      margin-bottom: 36px;
+      font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); opacity: 0.8; margin-bottom: 36px;
     }
     .social-links {
       display: flex; gap: 28px; justify-content: center;
       margin-bottom: 24px; flex-wrap: wrap;
     }
     .social-links a {
-      color: var(--cream); opacity: 0.65;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+      color: var(--cream); opacity: 0.65; transition: all 0.3s ease;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
     }
     .social-links a:hover { opacity: 1; color: var(--gold); }
     .social-links svg { width: 16px; height: 16px; }
     .footer-contact {
-      font-size: 0.75rem;
-      color: var(--cream);
-      opacity: 0.5;
-      letter-spacing: 0.12em;
-      margin-bottom: 24px;
+      font-size: 0.75rem; color: var(--cream); opacity: 0.5;
+      letter-spacing: 0.12em; margin-bottom: 24px;
     }
     .footer-contact a { color: inherit; text-decoration: none; transition: color 0.3s ease; }
     .footer-contact a:hover { color: var(--gold); opacity: 1; }
+    .footer-links {
+      display: flex; gap: 24px; justify-content: center;
+      margin: 24px 0; flex-wrap: wrap;
+    }
+    .footer-links a, .footer-links button {
+      color: var(--cream); opacity: 0.6; text-decoration: none;
+      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      transition: all 0.3s ease; background: none; border: none;
+      cursor: pointer; font-family: 'Inter', sans-serif; padding: 0;
+    }
+    .footer-links a:hover, .footer-links button:hover { color: var(--gold); opacity: 1; }
     .footer-legal {
-      font-size: 0.7rem;
-      color: var(--cream);
-      opacity: 0.35;
-      letter-spacing: 0.1em;
-      margin-top: 28px;
-      padding-top: 24px;
+      font-size: 0.7rem; color: var(--cream); opacity: 0.35;
+      letter-spacing: 0.1em; margin-top: 28px; padding-top: 24px;
       border-top: 1px solid rgba(245, 241, 232, 0.08);
     }
-    
-    /* ============ ANIMATIONS ============ */
+    .cookie-banner {
+      position: fixed; bottom: 20px; left: 20px; right: 20px;
+      max-width: 520px; margin: 0 auto;
+      background: rgba(26, 46, 38, 0.97); backdrop-filter: blur(20px);
+      border: 1px solid rgba(212, 168, 87, 0.3); border-radius: 12px;
+      padding: 20px 22px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      z-index: 10000; transform: translateY(150%);
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .cookie-banner.show { transform: translateY(0); }
+    .cookie-banner-text {
+      font-size: 0.8125rem; line-height: 1.6;
+      color: var(--cream); opacity: 0.9; margin-bottom: 16px;
+    }
+    .cookie-banner-text a {
+      color: var(--gold); text-decoration: none;
+      border-bottom: 1px solid rgba(212, 168, 87, 0.5);
+    }
+    .cookie-banner-text a:hover { border-color: var(--gold); }
+    .cookie-banner-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+    .cookie-btn {
+      flex: 1; min-width: 120px; padding: 10px 18px; border-radius: 100px;
+      font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.25s ease; border: 1px solid transparent;
+    }
+    .cookie-btn.accept { background: var(--gold); color: var(--pine); }
+    .cookie-btn.accept:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .cookie-btn.reject {
+      background: transparent; color: var(--cream);
+      border-color: rgba(245, 241, 232, 0.2);
+    }
+    .cookie-btn.reject:hover {
+      border-color: rgba(245, 241, 232, 0.4);
+      background: rgba(245, 241, 232, 0.05);
+    }
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes expandWidth { from { width: 0; opacity: 0; } to { width: 60px; opacity: 0.7; } }
     @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.4); } }
     @keyframes bounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -8px); } }
-    
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    
-    /* ============ MOBILE ============ */
     @media (max-width: 768px) {
       section { padding: 80px 20px; }
       .elements-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -698,8 +516,9 @@
       .contact-buttons { flex-direction: column; align-items: stretch; }
       .contact-btn { justify-content: center; }
       .story-image, .river-photo { padding: 8px; margin-top: 48px; }
+      .cookie-banner { left: 12px; right: 12px; bottom: 12px; padding: 18px; }
+      .cookie-btn { min-width: 100%; }
     }
-    
     @media (max-width: 480px) {
       .project-stats { grid-template-columns: 1fr; gap: 24px; padding: 32px 0; }
     }
@@ -707,7 +526,6 @@
 </head>
 <body>
 
-  <!-- ============ HERO — CLEAN, NO BACKGROUND IMAGE ============ -->
   <section class="hero">
     <div class="hero-content">
       <div class="logo-mark">
@@ -717,49 +535,35 @@
           <polygon points="44,33 49,42 54,38 50,46 39,44" fill="#D4A857"/>
         </svg>
       </div>
-
       <h1>Tornik View</h1>
       <p class="location">Zlatibor · Serbia</p>
       <div class="divider"></div>
       <p class="tagline">where snow, pine and river meet</p>
-
-      <div class="status">
-        <span>Opening Winter 2026</span>
-      </div>
-
+      <div class="status"><span>Opening Winter 2026</span></div>
       <form class="signup" id="signupForm" novalidate>
         <label class="signup-label" for="email">Be the first to know</label>
         <div class="signup-form">
           <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" aria-label="Email address">
           <button type="submit" id="signupBtn">Notify me</button>
         </div>
-        <!-- Honeypot anti-spam field -->
         <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
         <div class="signup-message" id="signupMessage" role="status" aria-live="polite"></div>
       </form>
     </div>
-
     <div class="scroll-indicator">Discover</div>
   </section>
 
-  <!-- ============ STORY (with subtle clouds photo accent at bottom) ============ -->
   <section class="story">
     <div class="container">
       <p class="section-label">Our Story</p>
       <h2 class="section-title">A mountain you can call yours</h2>
       <div class="section-divider"></div>
-
       <div class="story-text">
         <p>Some places hold you the moment you arrive. The hush of pines. The crisp note of mountain air. The bright line of Tornik against a winter sky.</p>
-
         <p>Tornik View was born from that pull. A small enclave at Kobilja Glava — eight private triplex residences across four discreet buildings, set between the ski slopes of Tornik and the running waters of the Crni Rzav.</p>
-
         <p>Not a hotel. Not a complex. Just eight homes for those who want the mountain to feel like theirs.</p>
-
         <div class="story-signature">— Tornik View</div>
       </div>
-
-      <!-- Subtle framed photo of the view -->
       <div class="story-image">
         <img src="/clouds-hero.jpg" alt="Tornik mountain view from Kobilja Glava, Zlatibor" loading="lazy">
       </div>
@@ -767,14 +571,12 @@
     </div>
   </section>
 
-  <!-- ============ THREE ELEMENTS ============ -->
   <section class="elements">
     <div class="container">
       <p class="section-label">Three Elements</p>
       <h2 class="section-title">Snow. Pine. River.</h2>
       <p class="section-subtitle">The three landscapes that frame every day at Tornik View.</p>
       <div class="section-divider"></div>
-
       <div class="elements-grid">
         <div class="element-card">
           <svg class="element-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
@@ -785,7 +587,6 @@
           <h3 class="element-title">The Slope</h3>
           <p class="element-desc">Direct view of Tornik ski slopes from every residence. Five minutes by road to the ski centre.</p>
         </div>
-
         <div class="element-card">
           <svg class="element-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
             <path d="M32 8 L20 24 L26 24 L18 36 L24 36 L14 50 L50 50 L40 36 L46 36 L38 24 L44 24 Z"/>
@@ -795,7 +596,6 @@
           <h3 class="element-title">The Forest</h3>
           <p class="element-desc">Surrounded by pine. Quiet, fragrant, alive. The kind of forest you can step into from your door.</p>
         </div>
-
         <div class="element-card">
           <svg class="element-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 22 Q14 14, 22 22 T38 22 T54 22 T60 22"/>
@@ -809,19 +609,15 @@
     </div>
   </section>
 
-  <!-- ============ RIVER SECTION — Framed photo, NOT background ============ -->
   <section class="river-section">
     <div class="container">
       <p class="section-label">Crni Rzav</p>
       <h2 class="section-title">A river at your door</h2>
       <p class="section-subtitle">Three hundred metres of pine forest path between the residences and the water.</p>
       <div class="section-divider"></div>
-
-      <!-- Subtle framed river photo -->
       <div class="river-photo">
         <img src="/river-hero.jpg" alt="Crni Rzav river running near Tornik View, Kobilja Glava" loading="lazy">
       </div>
-
       <div class="river-stat-block">
         <div class="river-stat">300m</div>
         <p class="river-stat-label">to the river</p>
@@ -829,89 +625,51 @@
     </div>
   </section>
 
-  <!-- ============ THE PROJECT ============ -->
   <section class="project">
     <div class="container">
       <p class="section-label">The Project</p>
       <h2 class="section-title">Eight residences. Four buildings. One mountain.</h2>
       <div class="section-divider"></div>
-
       <div class="project-intro">
         <p>Phase One of Tornik View is intentionally small. Four discreet buildings, each holding two triplex residences. Eight owners in total — not eighty, not eight hundred. A measured project, designed to keep the privacy of the forest intact.</p>
       </div>
-
       <div class="project-stats">
-        <div class="stat">
-          <div class="stat-number">4</div>
-          <div class="stat-label">Buildings</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">8</div>
-          <div class="stat-label">Residences</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">3</div>
-          <div class="stat-label">Levels Each</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">300m</div>
-          <div class="stat-label">To the River</div>
-        </div>
+        <div class="stat"><div class="stat-number">4</div><div class="stat-label">Buildings</div></div>
+        <div class="stat"><div class="stat-number">8</div><div class="stat-label">Residences</div></div>
+        <div class="stat"><div class="stat-number">3</div><div class="stat-label">Levels Each</div></div>
+        <div class="stat"><div class="stat-number">300m</div><div class="stat-label">To the River</div></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ LOCATION ============ -->
   <section class="location-sec">
     <div class="container">
       <p class="section-label">The Location</p>
       <h2 class="section-title">Kobilja Glava, Zlatibor</h2>
       <p class="section-subtitle">A quiet corner of the mountain — close to everything, away from everything.</p>
       <div class="section-divider"></div>
-
       <ul class="location-list">
-        <li>
-          <span class="location-distance">300 m</span>
-          <span class="location-place">Crni Rzav river</span>
-        </li>
-        <li>
-          <span class="location-distance">3 km</span>
-          <span class="location-place">Ribničko lake</span>
-        </li>
-        <li>
-          <span class="location-distance">4 km</span>
-          <span class="location-place">Zlatibor town centre</span>
-        </li>
-        <li>
-          <span class="location-distance">5 km</span>
-          <span class="location-place">Tornik ski centre</span>
-        </li>
-        <li>
-          <span class="location-distance">—</span>
-          <span class="location-place">Direct view of Tornik ski slopes</span>
-        </li>
-        <li>
-          <span class="location-distance">—</span>
-          <span class="location-place">Surrounded by pine forest</span>
-        </li>
+        <li><span class="location-distance">300 m</span><span class="location-place">Crni Rzav river</span></li>
+        <li><span class="location-distance">3 km</span><span class="location-place">Ribničko lake</span></li>
+        <li><span class="location-distance">4 km</span><span class="location-place">Zlatibor town centre</span></li>
+        <li><span class="location-distance">5 km</span><span class="location-place">Tornik ski centre</span></li>
+        <li><span class="location-distance">—</span><span class="location-place">Direct view of Tornik ski slopes</span></li>
+        <li><span class="location-distance">—</span><span class="location-place">Surrounded by pine forest</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- ============ INTEREST FORM ============ -->
   <section class="interest">
     <div class="container">
       <p class="section-label">Register Your Interest</p>
       <h2 class="section-title">Reserve a residence</h2>
       <p class="section-subtitle">A small number of triplex residences are available for early reservation. We will respond personally.</p>
       <div class="section-divider"></div>
-
       <form class="interest-form" id="interestForm" novalidate>
         <div class="form-row">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required autocomplete="name">
         </div>
-
         <div class="form-grid">
           <div class="form-row">
             <label for="formEmail">Email</label>
@@ -922,7 +680,6 @@
             <input type="tel" id="phone" name="phone" autocomplete="tel">
           </div>
         </div>
-
         <div class="form-row">
           <label for="interest">Interest</label>
           <select id="interest" name="interest" required>
@@ -933,19 +690,14 @@
             <option value="info">Just information for now</option>
           </select>
         </div>
-
         <div class="form-row">
           <label for="message">Message (optional)</label>
           <textarea id="message" name="message" placeholder="Anything you would like us to know..."></textarea>
         </div>
-
-        <!-- Honeypot anti-spam field -->
         <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
-
         <button type="submit" class="form-submit" id="interestBtn">Send enquiry</button>
         <div class="form-message" id="interestMessage" role="status" aria-live="polite"></div>
       </form>
-
       <div class="contact-direct">
         <p>Or reach us directly</p>
         <div class="contact-buttons">
@@ -962,7 +714,6 @@
     </div>
   </section>
 
-  <!-- ============ FOOTER ============ -->
   <footer>
     <div class="footer-logo">
       <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -973,7 +724,6 @@
     </div>
     <div class="footer-brand">Tornik View</div>
     <div class="footer-tagline">Zlatibor · Serbia</div>
-
     <div class="social-links">
       <a href="https://instagram.com/tornikview" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -988,22 +738,30 @@
         <span>Email</span>
       </a>
     </div>
-
     <p class="footer-contact">
       Kobilja Glava · Zlatibor · Serbia · <a href="mailto:stay@tornikview.com">stay@tornikview.com</a>
     </p>
-
-    <p class="footer-legal">
-      © 2026 Tornik View · Developed by RFBT Limited
-    </p>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <button id="cookieSettingsBtn" type="button">Cookie Settings</button>
+    </div>
+    <p class="footer-legal">© 2026 Tornik View · Developed by RFBT Limited</p>
   </footer>
 
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <p class="cookie-banner-text">
+      We use cookies to understand how visitors use our site and improve your experience. Essential cookies are always active. Read our <a href="/privacy.html">Privacy Policy</a>.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button class="cookie-btn reject" id="cookieReject">Reject Non-Essential</button>
+      <button class="cookie-btn accept" id="cookieAccept">Accept All</button>
+    </div>
+  </div>
+
   <script>
-    // ============ WEB3FORMS INTEGRATION ============
     const WEB3FORMS_ACCESS_KEY = 'fc25d6c5-f419-44fa-aa49-71b36e6487fb';
     const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
-    // ---------- HERO EMAIL SIGNUP ----------
     const signupForm = document.getElementById('signupForm');
     const signupBtn = document.getElementById('signupBtn');
     const signupMessage = document.getElementById('signupMessage');
@@ -1013,17 +771,14 @@
       const email = document.getElementById('email').value.trim();
       const botcheck = signupForm.querySelector('input[name="botcheck"]').checked;
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
       if (!emailRegex.test(email)) {
         signupMessage.textContent = 'Please enter a valid email address.';
         signupMessage.style.color = '#E8B96A';
         signupMessage.classList.add('show');
         return;
       }
-
       signupBtn.disabled = true;
       signupBtn.textContent = 'Sending...';
-
       try {
         const payload = {
           access_key: WEB3FORMS_ACCESS_KEY,
@@ -1033,23 +788,20 @@
           email: email,
           botcheck: botcheck
         };
-
         const response = await fetch(WEB3FORMS_ENDPOINT, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify(payload)
         });
-
         const result = await response.json();
-
         if (result.success) {
           signupMessage.textContent = 'Thank you. We will be in touch when we open.';
           signupMessage.style.color = '#D4A857';
           signupMessage.classList.add('show');
           document.getElementById('email').value = '';
+          if (typeof gtag === 'function') {
+            gtag('event', 'signup_submit', { 'event_category': 'engagement', 'event_label': 'hero_email_signup' });
+          }
         } else {
           throw new Error(result.message || 'Submission failed');
         }
@@ -1063,7 +815,6 @@
       }
     });
 
-    // ---------- RESERVATION ENQUIRY FORM ----------
     const interestForm = document.getElementById('interestForm');
     const interestBtn = document.getElementById('interestBtn');
     const interestMessage = document.getElementById('interestMessage');
@@ -1076,14 +827,12 @@
       const interest = document.getElementById('interest').value;
       const message = document.getElementById('message').value.trim();
       const botcheck = interestForm.querySelector('input[name="botcheck"]').checked;
-
       if (!name || !formEmail || !interest) {
         interestMessage.textContent = 'Please fill in name, email and interest.';
         interestMessage.style.color = '#E8B96A';
         interestMessage.classList.add('show');
         return;
       }
-
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(formEmail)) {
         interestMessage.textContent = 'Please enter a valid email address.';
@@ -1091,48 +840,40 @@
         interestMessage.classList.add('show');
         return;
       }
-
       interestBtn.disabled = true;
       interestBtn.textContent = 'Sending...';
-
-      // Human-readable interest label
       const interestLabels = {
         ownership: 'Ownership — interested in buying a residence',
         stay: 'Stay — interested in renting when open',
         both: 'Both — owning and using it as a holiday home',
         info: 'Just information for now'
       };
-
       try {
         const payload = {
           access_key: WEB3FORMS_ACCESS_KEY,
           subject: '✨ New Reservation Enquiry — ' + name,
           from_name: 'Tornik View Website',
           form_type: 'Reservation Enquiry',
-          name: name,
-          email: formEmail,
+          name: name, email: formEmail,
           phone: phone || '(not provided)',
           interest: interestLabels[interest] || interest,
           message: message || '(no message)',
           botcheck: botcheck
         };
-
         const response = await fetch(WEB3FORMS_ENDPOINT, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify(payload)
         });
-
         const result = await response.json();
-
         if (result.success) {
           interestMessage.textContent = 'Thank you. We will respond personally within 24 hours.';
           interestMessage.style.color = '#D4A857';
           interestMessage.classList.add('show');
           interestForm.reset();
+          if (typeof gtag === 'function') {
+            gtag('event', 'enquiry_submit', { 'event_category': 'conversion', 'event_label': 'reservation_enquiry', 'interest_type': interest });
+          }
         } else {
           throw new Error(result.message || 'Submission failed');
         }
@@ -1146,21 +887,34 @@
       }
     });
 
-    // ---------- SCROLL REVEAL ANIMATIONS ----------
-    const revealElements = document.querySelectorAll('section');
-    revealElements.forEach((el, i) => {
-      if (i === 0) return;
-      el.classList.add('reveal');
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookieAccept = document.getElementById('cookieAccept');
+    const cookieReject = document.getElementById('cookieReject');
+    const cookieSettingsBtn = document.getElementById('cookieSettingsBtn');
+    function showCookieBanner() { setTimeout(() => cookieBanner.classList.add('show'), 800); }
+    function hideCookieBanner() { cookieBanner.classList.remove('show'); }
+    function acceptCookies() {
+      localStorage.setItem('tv_cookie_consent', 'accepted');
+      if (typeof gtag === 'function') { gtag('consent', 'update', { 'analytics_storage': 'granted' }); }
+      hideCookieBanner();
+    }
+    function rejectCookies() {
+      localStorage.setItem('tv_cookie_consent', 'rejected');
+      hideCookieBanner();
+    }
+    if (!localStorage.getItem('tv_cookie_consent')) { showCookieBanner(); }
+    cookieAccept.addEventListener('click', acceptCookies);
+    cookieReject.addEventListener('click', rejectCookies);
+    cookieSettingsBtn.addEventListener('click', () => {
+      localStorage.removeItem('tv_cookie_consent');
+      showCookieBanner();
     });
 
+    const revealElements = document.querySelectorAll('section');
+    revealElements.forEach((el, i) => { if (i === 0) return; el.classList.add('reveal'); });
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.15 });
-
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
