@@ -258,6 +258,16 @@
     
     .signup-message.show { opacity: 1; }
     
+    /* Honeypot anti-spam — hidden from real users */
+    .honeypot {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px !important;
+      height: 1px !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+    
     .scroll-indicator {
       position: absolute;
       bottom: 32px;
@@ -723,6 +733,8 @@
           <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" aria-label="Email address">
           <button type="submit" id="signupBtn">Notify me</button>
         </div>
+        <!-- Honeypot anti-spam field -->
+        <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
         <div class="signup-message" id="signupMessage" role="status" aria-live="polite"></div>
       </form>
     </div>
@@ -927,6 +939,9 @@
           <textarea id="message" name="message" placeholder="Anything you would like us to know..."></textarea>
         </div>
 
+        <!-- Honeypot anti-spam field -->
+        <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
+
         <button type="submit" class="form-submit" id="interestBtn">Send enquiry</button>
         <div class="form-message" id="interestMessage" role="status" aria-live="polite"></div>
       </form>
@@ -984,6 +999,11 @@
   </footer>
 
   <script>
+    // ============ WEB3FORMS INTEGRATION ============
+    const WEB3FORMS_ACCESS_KEY = 'fc25d6c5-f419-44fa-aa49-71b36e6487fb';
+    const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+
+    // ---------- HERO EMAIL SIGNUP ----------
     const signupForm = document.getElementById('signupForm');
     const signupBtn = document.getElementById('signupBtn');
     const signupMessage = document.getElementById('signupMessage');
@@ -991,8 +1011,9 @@
     signupForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = document.getElementById('email').value.trim();
+      const botcheck = signupForm.querySelector('input[name="botcheck"]').checked;
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      
+
       if (!emailRegex.test(email)) {
         signupMessage.textContent = 'Please enter a valid email address.';
         signupMessage.style.color = '#E8B96A';
@@ -1004,29 +1025,45 @@
       signupBtn.textContent = 'Sending...';
 
       try {
-        const subscribers = JSON.parse(localStorage.getItem('tv_subscribers') || '[]');
-        if (!subscribers.includes(email)) {
-          subscribers.push(email);
-          localStorage.setItem('tv_subscribers', JSON.stringify(subscribers));
-        }
+        const payload = {
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: '🔔 New Email Signup — Tornik View',
+          from_name: 'Tornik View Website',
+          form_type: 'Email Signup',
+          email: email,
+          botcheck: botcheck
+        };
 
-        setTimeout(() => {
+        const response = await fetch(WEB3FORMS_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
           signupMessage.textContent = 'Thank you. We will be in touch when we open.';
           signupMessage.style.color = '#D4A857';
           signupMessage.classList.add('show');
           document.getElementById('email').value = '';
-          signupBtn.disabled = false;
-          signupBtn.textContent = 'Notify me';
-        }, 800);
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
       } catch (err) {
-        signupMessage.textContent = 'Something went wrong. Please try again.';
+        signupMessage.innerHTML = 'Something went wrong. Please email us at <a href="mailto:invest@tornikview.com" style="color:#D4A857;text-decoration:underline;">invest@tornikview.com</a>';
         signupMessage.style.color = '#E8B96A';
         signupMessage.classList.add('show');
+      } finally {
         signupBtn.disabled = false;
         signupBtn.textContent = 'Notify me';
       }
     });
 
+    // ---------- RESERVATION ENQUIRY FORM ----------
     const interestForm = document.getElementById('interestForm');
     const interestBtn = document.getElementById('interestBtn');
     const interestMessage = document.getElementById('interestMessage');
@@ -1035,8 +1072,11 @@
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
       const formEmail = document.getElementById('formEmail').value.trim();
+      const phone = document.getElementById('phone').value.trim();
       const interest = document.getElementById('interest').value;
-      
+      const message = document.getElementById('message').value.trim();
+      const botcheck = interestForm.querySelector('input[name="botcheck"]').checked;
+
       if (!name || !formEmail || !interest) {
         interestMessage.textContent = 'Please fill in name, email and interest.';
         interestMessage.style.color = '#E8B96A';
@@ -1055,36 +1095,58 @@
       interestBtn.disabled = true;
       interestBtn.textContent = 'Sending...';
 
-      try {
-        const enquiries = JSON.parse(localStorage.getItem('tv_enquiries') || '[]');
-        const enquiry = {
-          name,
-          email: formEmail,
-          phone: document.getElementById('phone').value.trim(),
-          interest,
-          message: document.getElementById('message').value.trim(),
-          date: new Date().toISOString()
-        };
-        enquiries.push(enquiry);
-        localStorage.setItem('tv_enquiries', JSON.stringify(enquiries));
+      // Human-readable interest label
+      const interestLabels = {
+        ownership: 'Ownership — interested in buying a residence',
+        stay: 'Stay — interested in renting when open',
+        both: 'Both — owning and using it as a holiday home',
+        info: 'Just information for now'
+      };
 
-        setTimeout(() => {
+      try {
+        const payload = {
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: '✨ New Reservation Enquiry — ' + name,
+          from_name: 'Tornik View Website',
+          form_type: 'Reservation Enquiry',
+          name: name,
+          email: formEmail,
+          phone: phone || '(not provided)',
+          interest: interestLabels[interest] || interest,
+          message: message || '(no message)',
+          botcheck: botcheck
+        };
+
+        const response = await fetch(WEB3FORMS_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
           interestMessage.textContent = 'Thank you. We will respond personally within 24 hours.';
           interestMessage.style.color = '#D4A857';
           interestMessage.classList.add('show');
           interestForm.reset();
-          interestBtn.disabled = false;
-          interestBtn.textContent = 'Send enquiry';
-        }, 1000);
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
       } catch (err) {
-        interestMessage.textContent = 'Something went wrong. Please contact us at invest@tornikview.com';
+        interestMessage.innerHTML = 'Something went wrong. Please email us at <a href="mailto:invest@tornikview.com" style="color:#D4A857;text-decoration:underline;">invest@tornikview.com</a> or WhatsApp +381 62 710 1000';
         interestMessage.style.color = '#E8B96A';
         interestMessage.classList.add('show');
+      } finally {
         interestBtn.disabled = false;
         interestBtn.textContent = 'Send enquiry';
       }
     });
 
+    // ---------- SCROLL REVEAL ANIMATIONS ----------
     const revealElements = document.querySelectorAll('section');
     revealElements.forEach((el, i) => {
       if (i === 0) return;
