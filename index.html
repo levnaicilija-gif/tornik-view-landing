@@ -302,12 +302,35 @@
       opacity: 0.75; max-width: 280px; margin: 0 auto;
     }
     .river-section { background: var(--pine-dark); }
-    .river-photo {
-      max-width: 720px; margin: 0 auto 48px; padding: 12px;
+    .river-video-wrap {
+      max-width: 360px;
+      margin: 0 auto 48px;
+      padding: 12px;
       background: rgba(245, 241, 232, 0.03);
-      border: 1px solid rgba(212, 168, 87, 0.25); border-radius: 2px;
+      border: 1px solid rgba(212, 168, 87, 0.35);
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5), 0 0 60px rgba(212, 168, 87, 0.08);
     }
-    .river-photo img { width: 100%; height: auto; display: block; border-radius: 1px; }
+    .river-video-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 4px;
+      background: linear-gradient(180deg, rgba(212, 168, 87, 0.25), transparent 30%, transparent 70%, rgba(212, 168, 87, 0.25));
+      pointer-events: none;
+      z-index: 0;
+    }
+    .river-video {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+      position: relative;
+      z-index: 1;
+      background: var(--pine-dark);
+    }
     .river-stat-block { text-align: center; }
     .river-stat {
       font-family: 'Cormorant Garamond', Georgia, serif;
@@ -515,7 +538,8 @@
       .logo-mark { width: 72px; height: 72px; margin-bottom: 28px; }
       .contact-buttons { flex-direction: column; align-items: stretch; }
       .contact-btn { justify-content: center; }
-      .story-image, .river-photo { padding: 8px; margin-top: 48px; }
+      .story-image, .river-video-wrap { padding: 8px; margin-top: 48px; }
+      .river-video-wrap { max-width: 280px; }
       .cookie-banner { left: 12px; right: 12px; bottom: 12px; padding: 18px; }
       .cookie-btn { min-width: 100%; }
     }
@@ -615,8 +639,19 @@
       <h2 class="section-title">A river at your door</h2>
       <p class="section-subtitle">Three hundred metres of pine forest path between the residences and the water.</p>
       <div class="section-divider"></div>
-      <div class="river-photo">
-        <img src="/river-hero.jpg" alt="Crni Rzav river running near Tornik View, Kobilja Glava" loading="lazy">
+      <div class="river-video-wrap">
+        <video
+          class="river-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="/river-hero.jpg"
+          aria-label="Crni Rzav river footage">
+          <source src="/river-video.mp4" type="video/mp4">
+          <img src="/river-hero.jpg" alt="Crni Rzav river running near Tornik View, Kobilja Glava">
+        </video>
       </div>
       <div class="river-stat-block">
         <div class="river-stat">300m</div>
