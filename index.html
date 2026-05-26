@@ -586,6 +586,137 @@
       font-size: 1.5rem; color: var(--gold); width: 100px; flex-shrink: 0;
     }
     .location-place { flex: 1; opacity: 0.9; letter-spacing: 0.02em; }
+
+    /* ============ GOLD GONDOLA HIGHLIGHT ============ */
+    .gondola-highlight {
+      max-width: 900px; margin: 0 auto 48px;
+      padding: 36px 32px;
+      background: linear-gradient(135deg, rgba(212, 168, 87, 0.12) 0%, rgba(212, 168, 87, 0.04) 100%);
+      border: 1px solid rgba(212, 168, 87, 0.35);
+      border-radius: 6px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .gondola-icon {
+      font-size: 3.5rem;
+      line-height: 1;
+      filter: grayscale(0.2);
+    }
+    .gondola-content {}
+    .gondola-badge {
+      display: inline-block;
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); opacity: 0.85;
+      padding: 4px 10px;
+      border: 1px solid rgba(212, 168, 87, 0.35);
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+    .gondola-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 8px; line-height: 1.2;
+    }
+    .gondola-desc {
+      font-size: 0.9375rem; color: var(--cream); opacity: 0.78;
+      line-height: 1.6; margin-bottom: 16px;
+    }
+    .gondola-stats {
+      display: flex; gap: 32px; flex-wrap: wrap;
+    }
+    .gondola-stat {
+      font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.65;
+    }
+    .gondola-stat strong {
+      display: block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem; color: var(--gold); font-weight: 400;
+      letter-spacing: 0.02em; text-transform: none;
+      margin-bottom: 2px;
+    }
+
+    /* ============ MAP ============ */
+    .map-wrap {
+      max-width: 1100px; margin: 48px auto 0;
+      border: 1px solid rgba(212, 168, 87, 0.3);
+      border-radius: 6px;
+      overflow: hidden;
+      background: rgba(245, 241, 232, 0.04);
+      position: relative;
+    }
+    .map-toolbar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 20px;
+      background: rgba(26, 46, 38, 0.6);
+      border-bottom: 1px solid rgba(212, 168, 87, 0.2);
+    }
+    .map-coords {
+      font-size: 0.75rem; letter-spacing: 0.1em;
+      color: var(--cream); opacity: 0.7;
+      font-family: 'Inter', sans-serif;
+    }
+    .map-coords strong { color: var(--gold); margin-right: 6px; }
+    .map-actions {
+      display: flex; gap: 8px;
+    }
+    .map-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 14px;
+      background: rgba(245, 241, 232, 0.06);
+      border: 1px solid rgba(245, 241, 232, 0.12);
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream); opacity: 0.85;
+      text-decoration: none; cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .map-btn:hover { opacity: 1; background: rgba(212, 168, 87, 0.15); border-color: rgba(212, 168, 87, 0.4); }
+    .map-btn.primary { background: var(--gold); color: var(--pine); border-color: var(--gold); opacity: 1; }
+    .map-btn.primary:hover { background: var(--gold-light); }
+    .map-iframe-wrap {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      background: var(--pine-dark);
+    }
+    .map-iframe-wrap iframe {
+      width: 100%; height: 100%; border: 0; display: block;
+    }
+    .map-legend {
+      padding: 16px 20px;
+      background: rgba(26, 46, 38, 0.5);
+      border-top: 1px solid rgba(212, 168, 87, 0.15);
+      display: flex; gap: 24px; flex-wrap: wrap; justify-content: center;
+      font-size: 0.75rem; color: var(--cream); opacity: 0.8;
+    }
+    .legend-pin {
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .legend-pin-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+    .legend-pin-dot.gold { background: var(--gold); box-shadow: 0 0 8px rgba(212,168,87,0.5); }
+    .legend-pin-dot.cream { background: var(--cream); }
+    .legend-pin-dot.blue { background: #5BA9D6; }
+
+    @media (max-width: 768px) {
+      .gondola-highlight {
+        grid-template-columns: 1fr;
+        gap: 16px; padding: 28px 20px; text-align: center;
+      }
+      .gondola-icon { font-size: 2.5rem; margin: 0 auto; }
+      .gondola-stats { justify-content: center; gap: 20px; }
+      .map-toolbar { flex-direction: column; gap: 12px; align-items: flex-start; }
+      .map-coords { font-size: 0.7rem; }
+      .map-iframe-wrap { height: 360px; }
+      .map-legend { gap: 14px; padding: 14px 16px; }
+    }
     .interest { background: linear-gradient(180deg, var(--pine) 0%, var(--pine-light) 100%); }
     .interest-form { max-width: 560px; margin: 0 auto; }
     .form-row { margin-bottom: 20px; }
@@ -1088,14 +1219,59 @@
       <h2 class="section-title">Kobilja Glava, Zlatibor</h2>
       <p class="section-subtitle">A quiet corner of the mountain — close to everything, away from everything.</p>
       <div class="section-divider"></div>
+
+      <!-- Gold Gondola Highlight -->
+      <div class="gondola-highlight">
+        <div class="gondola-icon">🚠</div>
+        <div class="gondola-content">
+          <span class="gondola-badge">★ Guinness World Record</span>
+          <h3 class="gondola-title">World's longest panoramic gondola</h3>
+          <p class="gondola-desc">The Gold Gondola Zlatibor stretches 9 kilometres from the village centre up to Tornik peak via Lake Ribničko — and its base station is just 3.5 km from your residence.</p>
+          <div class="gondola-stats">
+            <div class="gondola-stat"><strong>9 km</strong>Gondola route</div>
+            <div class="gondola-stat"><strong>25 min</strong>To Tornik peak</div>
+            <div class="gondola-stat"><strong>3.5 km</strong>From residence</div>
+            <div class="gondola-stat"><strong>1,496 m</strong>Summit elevation</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Distance list -->
       <ul class="location-list">
-        <li><span class="location-distance">300 m</span><span class="location-place">Crni Rzav river</span></li>
+        <li><span class="location-distance">300 m</span><span class="location-place">Crni Rzav river (pine forest path)</span></li>
         <li><span class="location-distance">3 km</span><span class="location-place">Ribničko lake</span></li>
-        <li><span class="location-distance">3.5 km</span><span class="location-place">Zlatibor town centre</span></li>
-        <li><span class="location-distance">5 km</span><span class="location-place">Tornik ski centre</span></li>
+        <li><span class="location-distance">3.5 km</span><span class="location-place">Zlatibor town centre &amp; Gold Gondola</span></li>
+        <li><span class="location-distance">5 km</span><span class="location-place">Tornik ski centre (or 25 min by gondola)</span></li>
         <li><span class="location-distance">—</span><span class="location-place">Direct view of Tornik ski slopes</span></li>
         <li><span class="location-distance">—</span><span class="location-place">Surrounded by pine forest</span></li>
       </ul>
+
+      <!-- Interactive Google Map -->
+      <div class="map-wrap">
+        <div class="map-toolbar">
+          <div class="map-coords">
+            <strong>📍 GPS:</strong> 43.720082° N, 19.661732° E · Kobilja Glava
+          </div>
+          <div class="map-actions">
+            <button class="map-btn" id="mapToggle" type="button">Satellite</button>
+            <a class="map-btn primary" href="https://www.google.com/maps/dir/?api=1&destination=43.720082,19.661732" target="_blank" rel="noopener">Get Directions →</a>
+          </div>
+        </div>
+        <div class="map-iframe-wrap">
+          <iframe
+            id="locationMap"
+            src="https://www.google.com/maps?q=43.720082,19.661732&hl=en&z=14&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Tornik View location map"
+            allowfullscreen></iframe>
+        </div>
+        <div class="map-legend">
+          <span class="legend-pin"><span class="legend-pin-dot gold"></span>Tornik View · 43.720082, 19.661732</span>
+          <span class="legend-pin"><span class="legend-pin-dot cream"></span>Gold Gondola · Kraljeve vode</span>
+          <span class="legend-pin"><span class="legend-pin-dot blue"></span>Crni Rzav river</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1356,6 +1532,32 @@
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+  <!-- Map Satellite/Map Toggle -->
+  <script>
+    (function() {
+      const toggle = document.getElementById('mapToggle');
+      const iframe = document.getElementById('locationMap');
+      if (!toggle || !iframe) return;
+
+      let isSatellite = false;
+      const baseUrl = 'https://www.google.com/maps?q=43.720082,19.661732&hl=en&z=14';
+
+      toggle.addEventListener('click', () => {
+        isSatellite = !isSatellite;
+        if (isSatellite) {
+          iframe.src = baseUrl + '&t=k&output=embed';
+          toggle.textContent = 'Map';
+        } else {
+          iframe.src = baseUrl + '&output=embed';
+          toggle.textContent = 'Satellite';
+        }
+        if (typeof gtag === 'function') {
+          gtag('event', 'map_view_toggle', { view: isSatellite ? 'satellite' : 'map' });
+        }
+      });
+    })();
   </script>
 
   <!-- Residences Type A/B Toggle -->
