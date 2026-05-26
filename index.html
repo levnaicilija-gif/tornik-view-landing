@@ -9,6 +9,11 @@
   <meta name="keywords" content="Tornik View, Zlatibor, mountain residences for sale, ski apartment Zlatibor, Kobilja Glava, Crni Rzav, pine forest, Tornik ski slopes, triplex Zlatibor, investment apartment Serbia">
   <link rel="canonical" href="https://tornikview.com/">
 
+  <link rel="alternate" hreflang="en" href="https://tornikview.com/">
+  <link rel="alternate" hreflang="sr" href="https://tornikview.com/sr/">
+  <link rel="alternate" hreflang="ru" href="https://tornikview.com/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://tornikview.com/">
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tornikview.com/">
   <meta property="og:title" content="Tornik View · Mountain residences · Zlatibor">
@@ -752,9 +757,69 @@
     @media (max-width: 480px) {
       .project-stats { grid-template-columns: 1fr; gap: 24px; padding: 32px 0; }
     }
+
+    /* ============ LANGUAGE SWITCHER ============ */
+    .lang-switcher {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      display: flex;
+      gap: 4px;
+      background: rgba(26, 46, 38, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 6px;
+      border-radius: 100px;
+      border: 1px solid rgba(245, 241, 232, 0.12);
+    }
+    .lang-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0.65;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .lang-link:hover { opacity: 1; background: rgba(245, 241, 232, 0.06); }
+    .lang-link.active {
+      background: var(--gold);
+      color: var(--pine);
+      opacity: 1;
+    }
+    .lang-flag {
+      display: inline-block;
+      font-size: 0.95rem;
+      line-height: 1;
+    }
+    @media (max-width: 600px) {
+      .lang-switcher {
+        top: 12px; right: 12px;
+        padding: 4px;
+      }
+      .lang-link {
+        padding: 6px 10px;
+        font-size: 0.65rem;
+      }
+      .lang-link .lang-label { display: none; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Language Switcher -->
+  <nav class="lang-switcher" aria-label="Language">
+    <a href="/" class="lang-link active" hreflang="en"><span class="lang-flag">🇬🇧</span><span class="lang-label">EN</span></a>
+    <a href="/sr/" class="lang-link" hreflang="sr"><span class="lang-flag">🇷🇸</span><span class="lang-label">SR</span></a>
+    <a href="/ru/" class="lang-link" hreflang="ru"><span class="lang-flag">🇷🇺</span><span class="lang-label">RU</span></a>
+  </nav>
 
   <section class="hero">
     <div class="hero-content">
