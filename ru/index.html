@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#2D4A3E">
   <title>Tornik View · Восемь горных резиденций на Златиборе · Зима 2026</title>
   <meta name="description" content="Восемь частных трёхуровневых резиденций между горнолыжными склонами Торника и рекой Црни Рзав, в окружении соснового леса. Кобилья Глава, Златибор. Открытие зимой 2026.">
-  <meta name="keywords" content="Tornik View, Златибор, горные резиденции продажа, ски апартаменты Златибор, Кобилья Глава, Црни Рзав, сосновый лес, горнолыжные склоны Торник, триплекс Златибор, инвестиции в недвижимость Сербия, купить квартиру Сербия">
+  <meta name="keywords" content="Tornik View, Златибор, горные резиденции продажа, ски апартаменты Златибор, Кобилья Глава, Црни Рзав, сосновый лес, горнолыжные склоны Торник, триплекс Златибор, инвестиции Сербия, купить квартиру">
   <link rel="canonical" href="https://tornikview.com/ru/">
 
   <link rel="alternate" hreflang="en" href="https://tornikview.com/">
@@ -586,6 +586,397 @@
       font-size: 1.5rem; color: var(--gold); width: 100px; flex-shrink: 0;
     }
     .location-place { flex: 1; opacity: 0.9; letter-spacing: 0.02em; }
+
+    /* ============ GOLD GONDOLA HIGHLIGHT ============ */
+    .gondola-highlight {
+      max-width: 900px; margin: 0 auto 48px;
+      padding: 36px 32px;
+      background: linear-gradient(135deg, rgba(212, 168, 87, 0.12) 0%, rgba(212, 168, 87, 0.04) 100%);
+      border: 1px solid rgba(212, 168, 87, 0.35);
+      border-radius: 6px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .gondola-icon {
+      font-size: 3.5rem;
+      line-height: 1;
+      filter: grayscale(0.2);
+    }
+    .gondola-content {}
+    .gondola-badge {
+      display: inline-block;
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); opacity: 0.85;
+      padding: 4px 10px;
+      border: 1px solid rgba(212, 168, 87, 0.35);
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+    .gondola-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 8px; line-height: 1.2;
+    }
+    .gondola-desc {
+      font-size: 0.9375rem; color: var(--cream); opacity: 0.78;
+      line-height: 1.6; margin-bottom: 16px;
+    }
+    .gondola-stats {
+      display: flex; gap: 32px; flex-wrap: wrap;
+    }
+    .gondola-stat {
+      font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.65;
+    }
+    .gondola-stat strong {
+      display: block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem; color: var(--gold); font-weight: 400;
+      letter-spacing: 0.02em; text-transform: none;
+      margin-bottom: 2px;
+    }
+
+    /* ============ MAP ============ */
+    .map-wrap {
+      max-width: 1100px; margin: 48px auto 0;
+      border: 1px solid rgba(212, 168, 87, 0.3);
+      border-radius: 6px;
+      overflow: hidden;
+      background: rgba(245, 241, 232, 0.04);
+      position: relative;
+    }
+    .map-toolbar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 20px;
+      background: rgba(26, 46, 38, 0.6);
+      border-bottom: 1px solid rgba(212, 168, 87, 0.2);
+    }
+    .map-coords {
+      font-size: 0.75rem; letter-spacing: 0.1em;
+      color: var(--cream); opacity: 0.7;
+      font-family: 'Inter', sans-serif;
+    }
+    .map-coords strong { color: var(--gold); margin-right: 6px; }
+    .map-actions {
+      display: flex; gap: 8px;
+    }
+    .map-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 14px;
+      background: rgba(245, 241, 232, 0.06);
+      border: 1px solid rgba(245, 241, 232, 0.12);
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream); opacity: 0.85;
+      text-decoration: none; cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .map-btn:hover { opacity: 1; background: rgba(212, 168, 87, 0.15); border-color: rgba(212, 168, 87, 0.4); }
+    .map-btn.primary { background: var(--gold); color: var(--pine); border-color: var(--gold); opacity: 1; }
+    .map-btn.primary:hover { background: var(--gold-light); }
+    .map-iframe-wrap {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      background: var(--pine-dark);
+    }
+    .map-iframe-wrap iframe {
+      width: 100%; height: 100%; border: 0; display: block;
+    }
+    .map-legend {
+      padding: 16px 20px;
+      background: rgba(26, 46, 38, 0.5);
+      border-top: 1px solid rgba(212, 168, 87, 0.15);
+      display: flex; gap: 24px; flex-wrap: wrap; justify-content: center;
+      font-size: 0.75rem; color: var(--cream); opacity: 0.8;
+    }
+    .legend-pin {
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .legend-pin-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+    .legend-pin-dot.gold { background: var(--gold); box-shadow: 0 0 8px rgba(212,168,87,0.5); }
+    .legend-pin-dot.cream { background: var(--cream); }
+    .legend-pin-dot.blue { background: #5BA9D6; }
+
+    @media (max-width: 768px) {
+      .gondola-highlight {
+        grid-template-columns: 1fr;
+        gap: 16px; padding: 28px 20px; text-align: center;
+      }
+      .gondola-icon { font-size: 2.5rem; margin: 0 auto; }
+      .gondola-stats { justify-content: center; gap: 20px; }
+      .map-toolbar { flex-direction: column; gap: 12px; align-items: flex-start; }
+      .map-coords { font-size: 0.7rem; }
+      .map-iframe-wrap { height: 360px; }
+      .map-legend { gap: 14px; padding: 14px 16px; }
+    }
+
+    /* ============ THE REGION ============ */
+    .region { background: var(--pine); }
+    .region-intro {
+      max-width: 720px; margin: 0 auto 56px; text-align: center;
+    }
+    .region-intro p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85;
+    }
+    .region-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; max-width: 1100px; margin: 0 auto;
+    }
+    .region-card {
+      padding: 32px 26px;
+      background: rgba(245, 241, 232, 0.025);
+      border: 1px solid rgba(212, 168, 87, 0.2);
+      border-radius: 4px;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .region-card:hover {
+      border-color: rgba(212, 168, 87, 0.45);
+      transform: translateY(-4px);
+    }
+    .region-card-icon {
+      font-size: 2rem; line-height: 1; margin-bottom: 18px;
+      filter: grayscale(0.1);
+    }
+    .region-card-headline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem; font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 0.02em;
+      margin-bottom: 10px; line-height: 1.2;
+    }
+    .region-card-label {
+      font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.65;
+      margin-bottom: 14px;
+    }
+    .region-card-desc {
+      font-size: 0.875rem; line-height: 1.65;
+      color: var(--cream); opacity: 0.78;
+    }
+    .region-quote {
+      max-width: 800px; margin: 72px auto 0;
+      padding: 36px 32px;
+      border-left: 2px solid var(--gold);
+      background: rgba(245, 241, 232, 0.03);
+      border-radius: 0 4px 4px 0;
+    }
+    .region-quote-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.25rem, 2.4vw, 1.625rem);
+      font-style: italic; font-weight: 300;
+      line-height: 1.55;
+      color: var(--cream); opacity: 0.92;
+      margin-bottom: 18px;
+    }
+    .region-quote-attribution {
+      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); opacity: 0.85;
+    }
+    .region-sources {
+      max-width: 800px; margin: 48px auto 0;
+      text-align: center;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      color: var(--cream); opacity: 0.45;
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+      .region-grid { grid-template-columns: 1fr; gap: 18px; }
+      .region-card { padding: 24px 20px; }
+      .region-quote { padding: 28px 22px; }
+    }
+
+    /* ============ THE INVESTMENT ============ */
+    .investment { background: var(--pine-dark); }
+    .investment-intro { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+    .investment-intro p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85;
+    }
+    .investment-pillars {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 28px; max-width: 1000px; margin: 0 auto;
+    }
+    .investment-card {
+      padding: 36px 30px;
+      background: linear-gradient(135deg, rgba(212, 168, 87, 0.08) 0%, rgba(212, 168, 87, 0.02) 100%);
+      border: 1px solid rgba(212, 168, 87, 0.25);
+      border-radius: 4px;
+    }
+    .investment-card-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400;
+      color: var(--gold); line-height: 1; margin-bottom: 10px;
+    }
+    .investment-card-label {
+      font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.65;
+      margin-bottom: 18px;
+    }
+    .investment-card-headline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.375rem; color: var(--cream); font-weight: 400;
+      margin-bottom: 12px; line-height: 1.3;
+    }
+    .investment-card-desc {
+      font-size: 0.9375rem; color: var(--cream); opacity: 0.8;
+      line-height: 1.65;
+    }
+    .investment-disclaimer {
+      max-width: 800px; margin: 56px auto 0;
+      text-align: center;
+      font-size: 0.7rem; letter-spacing: 0.08em;
+      color: var(--cream); opacity: 0.4;
+      line-height: 1.7;
+    }
+
+    /* ============ THE LIFESTYLE ============ */
+    .lifestyle { background: linear-gradient(180deg, var(--pine-dark) 0%, var(--pine) 100%); }
+    .lifestyle-intro { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+    .lifestyle-intro p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85;
+    }
+    .seasons-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 32px; max-width: 1100px; margin: 0 auto;
+    }
+    .season-card {
+      padding: 40px 32px;
+      background: rgba(245, 241, 232, 0.025);
+      border: 1px solid rgba(212, 168, 87, 0.2);
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+    }
+    .season-card:hover { border-color: rgba(212, 168, 87, 0.45); }
+    .season-card-icon {
+      font-size: 2.5rem; line-height: 1; margin-bottom: 20px;
+    }
+    .season-card-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 400;
+      color: var(--gold); letter-spacing: 0.03em;
+      margin-bottom: 8px;
+    }
+    .season-card-months {
+      font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.55;
+      margin-bottom: 24px;
+    }
+    .season-card-desc {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.0625rem; font-style: italic; font-weight: 300;
+      color: var(--cream); opacity: 0.85;
+      line-height: 1.7; margin-bottom: 24px;
+    }
+    .season-activities { list-style: none; padding: 0; margin: 0; }
+    .season-activities li {
+      padding: 10px 0;
+      font-size: 0.9rem;
+      color: var(--cream); opacity: 0.78;
+      border-bottom: 1px solid rgba(245, 241, 232, 0.05);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .season-activities li:last-child { border-bottom: none; }
+    .season-activities li::before {
+      content: '·';
+      color: var(--gold); opacity: 0.7;
+      font-size: 1.5rem; line-height: 0.5;
+    }
+
+    /* ============ FAQ ============ */
+    .faq { background: var(--pine-dark); }
+    .faq-intro { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+    .faq-intro p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85;
+    }
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid rgba(245, 241, 232, 0.08);
+    }
+    .faq-item:first-of-type { border-top: 1px solid rgba(245, 241, 232, 0.08); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      padding: 24px 0;
+      display: flex; justify-content: space-between; align-items: center;
+      text-align: left;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 400;
+      color: var(--cream); opacity: 0.92;
+      transition: color 0.25s ease;
+      letter-spacing: 0.01em;
+    }
+    .faq-question:hover { color: var(--gold); opacity: 1; }
+    .faq-question .faq-icon {
+      flex-shrink: 0; margin-left: 24px;
+      width: 28px; height: 28px;
+      border: 1px solid rgba(212, 168, 87, 0.5);
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--gold);
+      font-size: 1.125rem; line-height: 1;
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 500px; }
+    .faq-answer-inner {
+      padding: 0 0 24px 0;
+      font-size: 0.9375rem; line-height: 1.75;
+      color: var(--cream); opacity: 0.78;
+      max-width: 95%;
+    }
+    .faq-answer-inner a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(212, 168, 87, 0.3); }
+    .faq-answer-inner a:hover { border-bottom-color: var(--gold); }
+    .faq-cta {
+      max-width: 600px; margin: 56px auto 0;
+      text-align: center;
+      padding: 32px 24px;
+      background: rgba(212, 168, 87, 0.06);
+      border: 1px solid rgba(212, 168, 87, 0.25);
+      border-radius: 4px;
+    }
+    .faq-cta p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.125rem; font-style: italic;
+      color: var(--cream); opacity: 0.9;
+      margin-bottom: 16px;
+    }
+    .faq-cta-btn {
+      display: inline-block;
+      background: var(--gold); color: var(--pine);
+      padding: 14px 32px; border-radius: 100px;
+      font-family: 'Inter', sans-serif; font-size: 0.75rem;
+      font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .faq-cta-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    @media (max-width: 768px) {
+      .investment-pillars { grid-template-columns: 1fr; gap: 18px; }
+      .investment-card { padding: 28px 22px; }
+      .seasons-grid { grid-template-columns: 1fr; gap: 20px; }
+      .season-card { padding: 28px 22px; }
+      .faq-question { font-size: 1rem; padding: 20px 0; }
+      .faq-question .faq-icon { width: 24px; height: 24px; font-size: 1rem; }
+    }
     .interest { background: linear-gradient(180deg, var(--pine) 0%, var(--pine-light) 100%); }
     .interest-form { max-width: 560px; margin: 0 auto; }
     .form-row { margin-bottom: 20px; }
@@ -839,7 +1230,7 @@
       <form class="signup" id="signupForm" novalidate>
         <label class="signup-label" for="email">Узнайте первыми</label>
         <div class="signup-form">
-          <input type="email" id="email" name="email" placeholder="ваш@email.com" required autocomplete="email" aria-label="Адрес электронной почты">
+          <input type="email" id="email" name="email" placeholder="ваш@email.com" required autocomplete="email" aria-label="Email">
           <button type="submit" id="signupBtn">Уведомить меня</button>
         </div>
         <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
@@ -1082,28 +1473,397 @@
     </div>
   </section>
 
+  <!-- ============ THE REGION ============ -->
+  <section class="region">
+    <div class="container">
+      <p class="section-label">Регион</p>
+      <h2 class="section-title">Гора на подъёме</h2>
+      <p class="section-subtitle">Златибор находится в эпицентре крупнейшей трансформации за поколение. Ваша резиденция — часть этой волны.</p>
+      <div class="section-divider"></div>
+
+      <div class="region-intro">
+        <p>Уже второе по посещаемости направление в Сербии после Белграда, гора теперь добавляет инфраструктуру мирового рекорда и глобальный авиадоступ — сохраняя при этом лес, который её определяет.</p>
+      </div>
+
+      <div class="region-grid">
+
+        <div class="region-card">
+          <div class="region-card-icon">🛫</div>
+          <p class="region-card-label">Скоро · Весна 2026</p>
+          <h3 class="region-card-headline">Новый аэропорт Златибор</h3>
+          <p class="region-card-desc">Строительство начинается весной 2026 на участке 200 га. ВПП длиной 2,5 км в итоге будет принимать чартерные рейсы, открывая Златибор для прямого международного туризма впервые.</p>
+        </div>
+
+        <div class="region-card">
+          <div class="region-card-icon">🚠</div>
+          <p class="region-card-label">Действует · Мировой рекорд</p>
+          <h3 class="region-card-headline">Gold Gondola</h3>
+          <p class="region-card-desc">Самая длинная панорамная гондола в мире — 9 км от центра деревни до пика Торник через озеро Рибничко. Поездка 25 минут, 1.200 пассажиров в час. Официально открыта в январе 2021.</p>
+        </div>
+
+        <div class="region-card">
+          <div class="region-card-icon">📈</div>
+          <p class="region-card-label">2025 · Туристический рекорд</p>
+          <h3 class="region-card-headline">1,3 млн ночёвок</h3>
+          <p class="region-card-desc">Ожидается в 2025 — с 1,2 млн в 2024 и 1 млн в 2023. Рост 30% за три года, иностранные туристы растут быстрее всего. Златибор — самая посещаемая гора в Сербии.</p>
+        </div>
+
+        <div class="region-card">
+          <div class="region-card-icon">🌲</div>
+          <p class="region-card-label">Защищено · 98%</p>
+          <h3 class="region-card-headline">Менее 2% урбанизировано</h3>
+          <p class="region-card-desc">Несмотря на рекордное число посетителей, лишь малая часть из 39 км² горной территории застроена. Строгие правила планирования и требования к традиционной архитектуре сохраняют характер соснового леса.</p>
+        </div>
+
+        <div class="region-card">
+          <div class="region-card-icon">🏔</div>
+          <p class="region-card-label">Национальный рейтинг</p>
+          <h3 class="region-card-headline">#2 направление в Сербии</h3>
+          <p class="region-card-desc">После Белграда Златибор привлекает больше международных гостей, чем любое другое место. Сильнейшие рынки в 2025: Турция, Китай (+24% г/г), Россия, Румыния, Босния, Польша.</p>
+        </div>
+
+        <div class="region-card">
+          <div class="region-card-icon">🏨</div>
+          <p class="region-card-label">Планируется · Крупные проекты</p>
+          <h3 class="region-card-headline">Крупнейший адвенчер-парк на Балканах</h3>
+          <p class="region-card-desc">Адвенчер-парк площадью 1.000 м² планируется в центре деревни, а премиум-курорт "Gold City" — на озере Рибничко: водные виды спорта, велнес, рекреация круглый год.</p>
+        </div>
+
+      </div>
+
+      <blockquote class="region-quote">
+        <p class="region-quote-text">«Златибор стал одним из самых желанных направлений для инвестиций в люкс-недвижимость в Сербии. Быстрое развитие инфраструктуры, современные жилые комплексы и растущий туристический спрос позиционируют этот горный регион как исключительно привлекательный для долгосрочных, надёжных инвестиций.»</p>
+        <p class="region-quote-attribution">— ALK Real Estate · Ноябрь 2025</p>
+      </blockquote>
+
+      <p class="region-sources">
+        Источники: Туристическая организация Златибора · Республиканский статистический офис Сербии · Муниципалитет Чаетины · eKapija · POMA (производитель гондолы)
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ THE INVESTMENT ============ -->
+  <section class="investment">
+    <div class="container">
+      <p class="section-label">Инвестиция</p>
+      <h2 class="section-title">Почему сейчас</h2>
+      <p class="section-subtitle">Покупка резиденции в Tornik View — это не просто дом в горах, это позиция на одном из самых быстрорастущих премиум-рынков региона, захваченная до следующей волны.</p>
+      <div class="section-divider"></div>
+
+      <div class="investment-intro">
+        <p>Стоимость недвижимости на Златиборе устойчиво растёт с 2019, а ближайшие пять лет принесут аэропорт, расширенную горнолыжную инфраструктуру и премиум-курорт Gold City. Резиденции первой фазы предлагаются по ценам до завершения строительства.</p>
+      </div>
+
+      <div class="investment-pillars">
+
+        <div class="investment-card">
+          <div class="investment-card-num">+30%</div>
+          <p class="investment-card-label">Рост туризма · 3 года</p>
+          <h3 class="investment-card-headline">Число посетителей быстро растёт</h3>
+          <p class="investment-card-desc">Ночёвки выросли с 1,0 млн (2023) до 1,2 млн (2024) и ожидаемых 1,3 млн+ в 2025. С новым аэропортом, открывающим чартерные рейсы, траектория устремляется вверх.</p>
+        </div>
+
+        <div class="investment-card">
+          <div class="investment-card-num">8 of 8</div>
+          <p class="investment-card-label">Ограниченное предложение</p>
+          <h3 class="investment-card-headline">Конечный проект</h3>
+          <p class="investment-card-desc">Tornik View намеренно небольшой — восемь резиденций в четырёх зданиях, без возможности дальнейшего расширения на участке. Редкость по замыслу, на рынке, склонном к избытку предложения в стандартных сегментах.</p>
+        </div>
+
+        <div class="investment-card">
+          <div class="investment-card-num">Pre-Build</div>
+          <p class="investment-card-label">Фаза 1 · Лучшая цена</p>
+          <h3 class="investment-card-headline">Резервируйте до завершения</h3>
+          <p class="investment-card-desc">Ранние резервации обеспечивают самую низкую цену входа. Цены растут с каждой фазой и снова при завершении. Фаза 1 (две резиденции) открывается зимой 2026.</p>
+        </div>
+
+        <div class="investment-card">
+          <div class="investment-card-num">Year Round</div>
+          <p class="investment-card-label">Арендный потенциал</p>
+          <h3 class="investment-card-headline">Спрос в каждый сезон</h3>
+          <p class="investment-card-desc">В отличие от односезонных горнолыжных курортов, Златибор принимает гостей все двенадцать месяцев — зимние лыжи, весенние тропы, летнее спасение от городской жары, осенний хайкинг. Сильный спрос на аренду круглый год.</p>
+        </div>
+
+      </div>
+
+      <p class="investment-disclaimer">
+        Информация предоставлена для общего руководства. Инвестиции в недвижимость несут риск, прошлая доходность не гарантирует будущей. Налоги, право собственности и условия аренды для иностранных покупателей разъясняются в разделе FAQ ниже и подтверждаются письменно при резервации.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ THE LIFESTYLE ============ -->
+  <section class="lifestyle">
+    <div class="container">
+      <p class="section-label">Образ жизни</p>
+      <h2 class="section-title">Гора для каждого сезона</h2>
+      <p class="section-subtitle">Златибор — не зимний курорт, пустеющий в апреле. Это круглогодичная гора, и ваша резиденция построена для обеих половин календаря.</p>
+      <div class="section-divider"></div>
+
+      <div class="lifestyle-intro">
+        <p>Та же резиденция, что держит снег на крыше в феврале, открывает свой южный фасад долгому летнему свету в июле. Ваши выходные здесь выглядят по-разному в каждый сезон — и это разнообразие часть ценности.</p>
+      </div>
+
+      <div class="seasons-grid">
+
+        <div class="season-card">
+          <div class="season-card-icon">❄</div>
+          <h3 class="season-card-title">Зима</h3>
+          <p class="season-card-months">Декабрь — Март</p>
+          <p class="season-card-desc">Снег на соснах, дым из камина, Gold Gondola бесшумно поднимается в белое небо. Лыжные ботинки у двери.</p>
+          <ul class="season-activities">
+            <li>Горнолыжный центр Торник — 5 км, или 25 мин на гондоле</li>
+            <li>Беговые лыжи по тихим лесным тропам</li>
+            <li>Прогулки в снегоступах вдоль Црни Рзав</li>
+            <li>Вечера у камина в вашем триплексе</li>
+            <li>Традиционный Новый год на Златиборе</li>
+          </ul>
+        </div>
+
+        <div class="season-card">
+          <div class="season-card-icon">🌲</div>
+          <h3 class="season-card-title">Лето</h3>
+          <p class="season-card-months">Июнь — Сентябрь</p>
+          <p class="season-card-desc">Спасение от жары Белграда и побережья. Сосновый лес на 950м. Утра достаточно прохладные для кофе на террасе, дни достаточно тёплые для реки.</p>
+          <ul class="season-activities">
+            <li>Хайкинг по сосновому лесу</li>
+            <li>Купание и рыбалка на Црни Рзав — 300м</li>
+            <li>Горный велосипед по специальным маршрутам</li>
+            <li>Водные виды спорта на озере Рибничко — 3 км</li>
+            <li>Прохладные ночи, идеальные для сна</li>
+          </ul>
+        </div>
+
+        <div class="season-card">
+          <div class="season-card-icon">🌸</div>
+          <h3 class="season-card-title">Весна</h3>
+          <p class="season-card-months">Апрель — Май</p>
+          <p class="season-card-desc">Гора просыпается. Полевые цветы на лугах, воздух острый от сосновой смолы. Туристов мало. Лес — ваш.</p>
+          <ul class="season-activities">
+            <li>Первые длинные прогулки года</li>
+            <li>Наблюдение за птицами по возвращении</li>
+            <li>Меньше посетителей, полный покой</li>
+            <li>Весенняя рыбалка на Црни Рзав</li>
+            <li>Гондола без толпы</li>
+          </ul>
+        </div>
+
+        <div class="season-card">
+          <div class="season-card-icon">🍂</div>
+          <h3 class="season-card-title">Осень</h3>
+          <p class="season-card-months">Октябрь — Ноябрь</p>
+          <p class="season-card-desc">Возможно, самый охраняемый секрет горы. Золотой свет сквозь сосны, грибной сезон в лесу, аромат дровяного дыма в прохладном воздухе.</p>
+          <ul class="season-activities">
+            <li>Сбор грибов и каштанов</li>
+            <li>Длинные походы в прохладную, ясную погоду</li>
+            <li>Местная сезонная еда и ракия</li>
+            <li>Фотография в осеннем лесу</li>
+            <li>Тихие выходные перед зимой</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq">
+    <div class="container">
+      <p class="section-label">Вопросы</p>
+      <h2 class="section-title">Перед резервацией</h2>
+      <p class="section-subtitle">Вопросы, которые нам чаще всего задают потенциальные владельцы — ответы заранее и прямо.</p>
+      <div class="section-divider"></div>
+
+      <div class="faq-intro">
+        <p>Если вашего вопроса здесь нет, напишите нам напрямую. Мы отвечаем на каждый запрос лично.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Могут ли иностранцы покупать недвижимость в Сербии?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Да. Сербия разрешает иностранным гражданам покупать недвижимость на основе взаимности — если ваша страна разрешает гражданам Сербии покупать там, вы можете купить здесь. Это включает граждан ЕС, Великобритании, США, России, Китая и большинства стран мира. Сделка совершается у сербского нотариуса, регистрируется в кадастре на ваше имя.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Каков график платежей?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Резервационный депозит закрепляет вашу единицу и фиксирует цену. Последующие платежи привязаны к этапам строительства (фундамент, крыша, отделка, передача) — обычно 4-5 поэтапных платежей в течение 12-18 месяцев. Финальный платёж — при передаче, с переводом в кадастре. Полный график подтверждается в вашем договоре резервации.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Что входит в стоимость?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              В цену входит триплекс-резиденция, построенная по спецификации архитектора, доля экстерьера и крыши здания, ваша частная терраса и пропорциональная доля участка. Внутренняя отделка (полы, плитка ванной, кухня) — по стандартной спецификации, апгрейды доступны. Мебель, бытовая техника и парковка детально описаны отдельно в пакете резервации.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            А налоги и текущие расходы?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Налог на передачу собственности в Сербии сейчас 2,5% от цены договора при перепродаже, но покупки новостроек у застройщика обычно включают НДС вместо. Ежегодный налог на имущество скромный — обычно гораздо менее €500/год для резиденции такого размера. Мы предоставляем полную оценку налогов при резервации и рекомендуем обратиться к независимому сербскому налоговому консультанту.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Могу ли я сдавать резиденцию в аренду, когда не использую её?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Да. Владельцы могут использовать резиденцию частно, сдавать краткосрочно (Airbnb/Booking.com) или заключать долгосрочные договоры. Златибор имеет сильный круглогодичный спрос на аренду, с пиковыми ценами в горнолыжный сезон (декабрь–март) и летом (июль–август). Мы можем порекомендовать местных партнёров по управлению недвижимостью, которые от имени владельцев занимаются бронированиями, уборкой и коммуникацией с гостями.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Как обслуживается здание зимой?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Все четыре здания спроектированы для горной зимы — утеплённая сэндвич-панельная конструкция, кровля с расчётом на снеговую нагрузку, морозоустойчивая сантехника. Общий взнос за обслуживание покрывает уборку снега на общих дорожках, экстерьер, водостоки и общедомовые коммунальные услуги. Внутри вашей резиденции вы контролируете отопление самостоятельно. Оценка ежегодного взноса предоставляется при резервации.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Кто застройщик?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Tornik View разрабатывает <strong>RFBT Limited</strong>, компания, зарегистрированная в Великобритании (Лондон). Архитектор — <strong>Марко Неговановић</strong> из Negovanović Studio, лицензированный сербский архитектор (лицензия 321 A187 23) с портфолио горных жилых проектов. Проектная документация, разрешения на строительство и корпоративная регистрация доступны серьёзным покупателям при процессе резервации.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Когда будет готова Фаза 1?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Фаза 1 включает первые две резиденции (Тип A), открытие зимой 2026. Фазы 2–4 каждая добавляет по две резиденции (Тип B), полный проект из восьми резиденций завершается к 2027. Мы отправляем обновления со стройплощадки и фотографии всем зарезервированным владельцам в течение строительства.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Могу ли я посетить участок до резервации?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Да — посещения участка тепло приветствуются для серьёзных потенциальных владельцев. Мы встретим вас в Кобильей Главе, пройдёмся по участку, покажем окружающий лес и реку и ответим на любые вопросы лично. Запросите осмотр через форму ниже — мы координируем визиты особенно в выходные.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="faq-cta">
+        <p>Есть вопрос, на который мы не ответили?</p>
+        <a href="#interest" class="faq-cta-btn">Спросите нас напрямую</a>
+      </div>
+    </div>
+  </section>
+
   <section class="location-sec">
     <div class="container">
       <p class="section-label">Расположение</p>
       <h2 class="section-title">Kobilja Glava, Zlatibor</h2>
       <p class="section-subtitle">Тихий уголок горы — близко ко всему, вдали от всего.</p>
       <div class="section-divider"></div>
+
+      <!-- Gold Gondola Highlight -->
+      <div class="gondola-highlight">
+        <div class="gondola-icon">🚠</div>
+        <div class="gondola-content">
+          <span class="gondola-badge">★ Мировой рекорд Гиннесса</span>
+          <h3 class="gondola-title">Самая длинная панорамная гондола в мире</h3>
+          <p class="gondola-desc">Gold Gondola Zlatibor простирается на 9 километров от центра деревни до пика Торник через озеро Рибничко — а её базовая станция всего в 3,5 км от вашей резиденции.</p>
+          <div class="gondola-stats">
+            <div class="gondola-stat"><strong>9 km</strong>Маршрут гондолы</div>
+            <div class="gondola-stat"><strong>25 min</strong>До пика Торник</div>
+            <div class="gondola-stat"><strong>3.5 km</strong>От резиденции</div>
+            <div class="gondola-stat"><strong>1,496 m</strong>Высота вершины</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Distance list -->
       <ul class="location-list">
-        <li><span class="location-distance">300 m</span><span class="location-place">Река Црни Рзав</span></li>
+        <li><span class="location-distance">300 m</span><span class="location-place">Река Црни Рзав (тропа через сосновый лес)</span></li>
         <li><span class="location-distance">3 km</span><span class="location-place">Озеро Рибничко</span></li>
-        <li><span class="location-distance">3.5 km</span><span class="location-place">Центр Златибора</span></li>
-        <li><span class="location-distance">5 km</span><span class="location-place">Горнолыжный центр Торник</span></li>
-        <li><span class="location-distance">—</span><span class="location-place">Прямой вид на склоны Торника</span></li>
+        <li><span class="location-distance">3.5 km</span><span class="location-place">Центр Златибора и Gold Gondola</span></li>
+        <li><span class="location-distance">5 km</span><span class="location-place">Горнолыжный центр Торник (или 25 мин на гондоле)</span></li>
+        <li><span class="location-distance">—</span><span class="location-place">Прямой вид на склоны Торник</span></li>
         <li><span class="location-distance">—</span><span class="location-place">В окружении соснового леса</span></li>
       </ul>
+
+      <!-- Interactive Google Map -->
+      <div class="map-wrap">
+        <div class="map-toolbar">
+          <div class="map-coords">
+            <strong>📍 GPS:</strong> 43.720082° N, 19.661732° E · Kobilja Glava
+          </div>
+          <div class="map-actions">
+            <button class="map-btn" id="mapToggle" type="button">Спутник</button>
+            <a class="map-btn primary" href="https://www.google.com/maps/dir/?api=1&destination=43.720082,19.661732" target="_blank" rel="noopener">Маршрут →</a>
+          </div>
+        </div>
+        <div class="map-iframe-wrap">
+          <iframe
+            id="locationMap"
+            src="https://www.google.com/maps?q=43.720082,19.661732&hl=en&z=14&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Карта расположения Tornik View"
+            allowfullscreen></iframe>
+        </div>
+        <div class="map-legend">
+          <span class="legend-pin"><span class="legend-pin-dot gold"></span>Tornik View · 43.720082, 19.661732</span>
+          <span class="legend-pin"><span class="legend-pin-dot cream"></span>Gold Gondola · Kraljeve vode</span>
+          <span class="legend-pin"><span class="legend-pin-dot blue"></span>Crni Rzav river</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="interest">
     <div class="container">
-      <p class="section-label">Выразите Интерес</p>
+      <p class="section-label">Выразите интерес</p>
       <h2 class="section-title">Зарезервировать резиденцию</h2>
-      <p class="section-subtitle">Небольшое количество трёхуровневых резиденций доступно для ранней резервации. Мы ответим лично.</p>
+      <p class="section-subtitle">Небольшое количество триплекс-резиденций доступно для ранней резервации. Мы ответим лично.</p>
       <div class="section-divider"></div>
       <form class="interest-form" id="interestForm" novalidate>
         <div class="form-row">
@@ -1124,9 +1884,9 @@
           <label for="interest">Интерес</label>
           <select id="interest" name="interest" required>
             <option value="">Выберите…</option>
-            <option value="ownership">Покупка — заинтересован/а в покупке резиденции</option>
-            <option value="stay">Аренда — заинтересован/а в аренде при открытии</option>
-            <option value="both">Оба — владение и использование как дома для отдыха</option>
+            <option value="ownership">Покупка — резиденция</option>
+            <option value="stay">Аренда — арендовать при открытии</option>
+            <option value="both">Оба — владение и отдых</option>
             <option value="info">Пока только информация</option>
           </select>
         </div>
@@ -1183,14 +1943,14 @@
     </p>
     <div class="footer-links">
       <a href="/privacy.html">Политику конфиденциальности</a>
-      <button id="cookieSettingsBtn" type="button">Настройки cookie</button>
+      <button id="cookieSettingsBtn" type="button">Настройки cookies</button>
     </div>
     <p class="footer-legal">© 2026 Tornik View · Проект компании RFBT Limited (Лондон) · Все права защищены</p>
   </footer>
 
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
     <p class="cookie-banner-text">
-      Мы используем файлы cookie, чтобы понять, как посетители используют наш сайт, и улучшить ваш опыт. Основные файлы cookie всегда активны. Прочитайте нашу <a href="/privacy.html">Политику конфиденциальности</a>.
+      Мы используем cookies, чтобы понять, как посетители используют наш сайт, и улучшить ваш опыт. Основные cookies всегда активны. Прочитайте нашу <a href="/privacy.html">Политику конфиденциальности</a>.
     </p>
     <div class="cookie-banner-buttons">
       <button class="cookie-btn reject" id="cookieReject">Отклонить необязательные</button>
@@ -1283,8 +2043,8 @@
       interestBtn.disabled = true;
       interestBtn.textContent = 'Отправка...';
       const interestLabels = {
-        ownership: 'Покупка — покупка резиденции',
-        stay: 'Аренда — аренда при открытии',
+        ownership: 'Покупка — резиденция',
+        stay: 'Аренда — арендовать при открытии',
         both: 'Оба — владение и отдых',
         info: 'Пока только информация'
       };
@@ -1356,6 +2116,62 @@
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+  <!-- Map Satellite/Map Toggle -->
+  <script>
+    (function() {
+      const toggle = document.getElementById('mapToggle');
+      const iframe = document.getElementById('locationMap');
+      if (!toggle || !iframe) return;
+
+      let isSatellite = false;
+      const baseUrl = 'https://www.google.com/maps?q=43.720082,19.661732&hl=en&z=14';
+
+      toggle.addEventListener('click', () => {
+        isSatellite = !isSatellite;
+        if (isSatellite) {
+          iframe.src = baseUrl + '&t=k&output=embed';
+          toggle.textContent = 'Map';
+        } else {
+          iframe.src = baseUrl + '&output=embed';
+          toggle.textContent = 'Satellite';
+        }
+        if (typeof gtag === 'function') {
+          gtag('event', 'map_view_toggle', { view: isSatellite ? 'satellite' : 'map' });
+        }
+      });
+    })();
+  </script>
+
+  <!-- FAQ Accordion -->
+  <script>
+    (function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      if (!faqItems.length) return;
+
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          // Close all other items first
+          faqItems.forEach(other => {
+            other.classList.remove('open');
+            const ob = other.querySelector('.faq-question');
+            if (ob) ob.setAttribute('aria-expanded', 'false');
+          });
+          // Toggle current
+          if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+            if (typeof gtag === 'function') {
+              gtag('event', 'faq_open', { question: btn.textContent.trim().substring(0, 60) });
+            }
+          }
+        });
+      });
+    })();
   </script>
 
   <!-- Residences Type A/B Toggle -->
