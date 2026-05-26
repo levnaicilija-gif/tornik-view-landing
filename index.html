@@ -143,6 +143,17 @@
       margin-bottom: 48px;
       animation: fadeInUp 1.2s ease-out 0.5s both;
     }
+    .subtitle {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2.4vw, 1.5rem);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--cream);
+      opacity: 0.85;
+      margin: 0 auto 14px;
+      letter-spacing: 0.04em;
+      animation: fadeInUp 1.2s ease-out 0.35s both;
+    }
     .divider {
       width: 60px;
       height: 1px;
@@ -365,6 +376,199 @@
       color: var(--cream); opacity: 0.7;
     }
     .location-sec { background: var(--pine-dark); }
+
+    /* ============ ARCHITECTURE ============ */
+    .architecture { background: var(--pine-dark); }
+    .architecture-intro { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+    .architecture-intro p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85;
+    }
+    .elevation-wrap {
+      max-width: 1100px; margin: 0 auto;
+      padding: 24px;
+      background: var(--cream);
+      border: 1px solid rgba(212, 168, 87, 0.3);
+      border-radius: 4px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+    .elevation-img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .elevation-caption {
+      text-align: center; margin-top: 24px;
+      font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold); opacity: 0.85;
+    }
+    .materials {
+      max-width: 900px; margin: 64px auto 0;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    }
+    .material-card { text-align: center; padding: 24px 18px; }
+    .material-swatch {
+      width: 64px; height: 64px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 168, 87, 0.25);
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    .material-swatch.black {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #1a1a1a 100%);
+    }
+    .material-swatch.wood {
+      background: repeating-linear-gradient(180deg, #8a6f4a 0px, #8a6f4a 4px, #6d5638 4px, #6d5638 5px);
+    }
+    .material-swatch.glass {
+      background: linear-gradient(135deg, rgba(245,241,232,0.4) 0%, rgba(255,255,255,0.7) 50%, rgba(245,241,232,0.3) 100%);
+      border-color: rgba(245,241,232,0.5);
+    }
+    .material-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.125rem; color: var(--cream); margin-bottom: 6px;
+      letter-spacing: 0.05em;
+    }
+    .material-desc {
+      font-size: 0.8125rem; color: var(--cream); opacity: 0.65;
+      line-height: 1.6;
+    }
+
+    /* ============ RESIDENCES ============ */
+    .residences { background: linear-gradient(180deg, var(--pine) 0%, var(--pine-dark) 100%); }
+    .residences-intro { max-width: 720px; margin: 0 auto 48px; text-align: center; }
+    .residences-intro p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85;
+    }
+    .type-toggle {
+      display: flex; justify-content: center; gap: 6px;
+      max-width: 460px; margin: 0 auto 24px;
+      background: rgba(245, 241, 232, 0.04);
+      padding: 5px; border-radius: 100px;
+      border: 1px solid rgba(245, 241, 232, 0.1);
+    }
+    .type-btn {
+      flex: 1; background: transparent; border: none;
+      color: var(--cream); opacity: 0.65;
+      padding: 13px 18px; border-radius: 100px;
+      font-family: 'Inter', sans-serif; font-size: 0.7rem;
+      font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.3s ease;
+    }
+    .type-btn:hover { opacity: 1; }
+    .type-btn.active { background: var(--gold); color: var(--pine); opacity: 1; }
+    .type-meta {
+      text-align: center; margin-bottom: 48px;
+      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.55;
+    }
+    .residence-highlight {
+      display: flex; gap: 48px; justify-content: center; flex-wrap: wrap;
+      margin: 0 auto 56px; max-width: 900px;
+      padding: 32px 24px;
+      border-top: 1px solid rgba(212, 168, 87, 0.2);
+      border-bottom: 1px solid rgba(212, 168, 87, 0.2);
+    }
+    .residence-highlight-item { text-align: center; }
+    .residence-highlight-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 400;
+      color: var(--gold); line-height: 1; margin-bottom: 8px;
+    }
+    .residence-highlight-label {
+      font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.7;
+    }
+    .floors-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 28px; margin: 0 auto;
+    }
+    .floor-card {
+      background: rgba(245, 241, 232, 0.025);
+      border: 1px solid rgba(212, 168, 87, 0.2);
+      border-radius: 4px;
+      padding: 24px 18px;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .floor-card:hover {
+      border-color: rgba(212, 168, 87, 0.45);
+      transform: translateY(-4px);
+    }
+    .floor-card-label {
+      font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 6px; text-align: center;
+    }
+    .floor-card-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem; font-weight: 400; letter-spacing: 0.06em;
+      color: var(--cream); text-align: center; margin-bottom: 4px;
+    }
+    .floor-card-area {
+      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.55; text-align: center; margin-bottom: 20px;
+    }
+    .floor-plan-wrap {
+      background: var(--cream);
+      padding: 14px;
+      border-radius: 3px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(212, 168, 87, 0.3);
+    }
+    .floor-plan-img { width: 100%; height: auto; display: block; border-radius: 1px; }
+    .floor-rooms { list-style: none; padding: 0; margin: 0; }
+    .floor-rooms li {
+      display: flex; justify-content: space-between;
+      padding: 7px 0;
+      font-size: 0.8125rem;
+      color: var(--cream);
+      border-bottom: 1px solid rgba(245, 241, 232, 0.06);
+    }
+    .floor-rooms li:last-child { border-bottom: none; }
+    .floor-rooms li.total {
+      margin-top: 4px; padding-top: 12px;
+      border-top: 1px solid rgba(212, 168, 87, 0.25);
+      border-bottom: none;
+    }
+    .floor-rooms li.total .room-name {
+      opacity: 1; text-transform: uppercase; letter-spacing: 0.15em;
+      font-size: 0.7rem; color: var(--gold);
+    }
+    .floor-rooms li.total .room-area { font-size: 1.125rem; color: var(--gold); }
+    .floor-rooms .room-name { opacity: 0.78; }
+    .floor-rooms .room-area { color: var(--gold); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1rem; }
+    .residences-cta { text-align: center; margin-top: 64px; }
+    .residences-cta-btn {
+      display: inline-block;
+      background: var(--gold); color: var(--pine);
+      padding: 16px 36px; border-radius: 100px;
+      font-family: 'Inter', sans-serif; font-size: 0.8125rem;
+      font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.25s ease;
+      text-decoration: none;
+    }
+    .residences-cta-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .residences-cta-note {
+      margin-top: 18px;
+      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.55;
+    }
+    .architect-credit {
+      max-width: 700px; margin: 48px auto 0;
+      text-align: center;
+      padding-top: 32px;
+      border-top: 1px solid rgba(245, 241, 232, 0.08);
+      font-size: 0.75rem; letter-spacing: 0.15em;
+      color: var(--cream); opacity: 0.5;
+    }
+    .architect-credit em {
+      color: var(--gold); font-style: normal; font-family: 'Cormorant Garamond', serif;
+      font-size: 0.9rem; letter-spacing: 0.05em;
+    }
+    @media (max-width: 900px) {
+      .floors-grid { grid-template-columns: 1fr; gap: 20px; }
+      .materials { grid-template-columns: 1fr; gap: 16px; max-width: 320px; }
+      .residence-highlight { gap: 24px; padding: 24px 16px; }
+      .elevation-wrap { padding: 12px; }
+    }
     .location-list { max-width: 600px; margin: 0 auto; list-style: none; }
     .location-list li {
       display: flex; align-items: center; padding: 20px 0;
@@ -526,6 +730,8 @@
       section { padding: 80px 20px; }
       .elements-grid { grid-template-columns: 1fr; gap: 36px; }
       .project-stats { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+      .floors-grid { grid-template-columns: 1fr; gap: 20px; }
+      .residence-highlight { gap: 28px; padding: 28px 16px; }
       .form-grid { grid-template-columns: 1fr; }
       .location-list li { flex-direction: column; align-items: flex-start; gap: 4px; padding: 16px 0; }
       .location-distance { width: auto; font-size: 1.25rem; }
@@ -560,6 +766,7 @@
         </svg>
       </div>
       <h1>Tornik View</h1>
+      <p class="subtitle">Eight triplex residences</p>
       <p class="location">Zlatibor · Serbia</p>
       <div class="divider"></div>
       <p class="tagline">where snow, pine and river meet</p>
@@ -674,6 +881,139 @@
         <div class="stat"><div class="stat-number">3</div><div class="stat-label">Levels Each</div></div>
         <div class="stat"><div class="stat-number">300m</div><div class="stat-label">To the River</div></div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ ARCHITECTURE ============ -->
+  <section class="architecture">
+    <div class="container">
+      <p class="section-label">The Architecture</p>
+      <h2 class="section-title">Black volumes in the pines</h2>
+      <p class="section-subtitle">Quiet, modern, and built for the mountain — a dark sculptural form set among the trees, opening south to the light.</p>
+      <div class="section-divider"></div>
+
+      <div class="architecture-intro">
+        <p>Each building is a pair of semi-detached residences, clad in black insulated panels that wrap seamlessly from wall to roof. Vertical timber softens the south façade. Large south-facing windows pull the mountain inside.</p>
+      </div>
+
+      <div class="elevation-wrap">
+        <img src="plans/izgled-B.png" alt="West and South elevations of Tornik View" class="elevation-img" id="elevationImg">
+      </div>
+      <p class="elevation-caption">West Elevation · South Elevation</p>
+
+      <div class="materials">
+        <div class="material-card">
+          <div class="material-swatch black"></div>
+          <h4 class="material-title">Black Panels</h4>
+          <p class="material-desc">Insulated sandwich panels — wall and roof in one continuous skin</p>
+        </div>
+        <div class="material-card">
+          <div class="material-swatch wood"></div>
+          <h4 class="material-title">Pine Cladding</h4>
+          <p class="material-desc">Vertical timber lamellas warming the entrance and south façade</p>
+        </div>
+        <div class="material-card">
+          <div class="material-swatch glass"></div>
+          <h4 class="material-title">South Glass</h4>
+          <p class="material-desc">Floor-to-ceiling windows pulling the mountain into every level</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESIDENCES ============ -->
+  <section class="residences">
+    <div class="container">
+      <p class="section-label">The Residences</p>
+      <h2 class="section-title">A triplex of your own</h2>
+      <p class="section-subtitle">Two semi-detached residences per building. Three private levels each. Designed for a couple or small family on the mountain.</p>
+      <div class="section-divider"></div>
+
+      <div class="residences-intro">
+        <p>Each residence at Tornik View is a self-contained triplex, paired with one neighbour in a quiet semi-detached building. Your own front door on the side. Two bedrooms on opposite levels. The living floor in between, opening south to the pine forest.</p>
+      </div>
+
+      <div class="type-toggle" role="tablist">
+        <button class="type-btn" data-type="A" role="tab">Type A · Phase 1</button>
+        <button class="type-btn active" data-type="B" role="tab">Type B · Phases 2–4</button>
+      </div>
+      <p class="type-meta" id="typeMeta">6 of 8 residences · Standard plan · Phases 2–4</p>
+
+      <div class="residence-highlight">
+        <div class="residence-highlight-item">
+          <div class="residence-highlight-num" id="statTotal">70.87 m²</div>
+          <div class="residence-highlight-label">Net Floor Area</div>
+        </div>
+        <div class="residence-highlight-item">
+          <div class="residence-highlight-num">3</div>
+          <div class="residence-highlight-label">Levels</div>
+        </div>
+        <div class="residence-highlight-item">
+          <div class="residence-highlight-num">2</div>
+          <div class="residence-highlight-label">Bedrooms</div>
+        </div>
+        <div class="residence-highlight-item">
+          <div class="residence-highlight-num">1</div>
+          <div class="residence-highlight-label">Private Entrance</div>
+        </div>
+      </div>
+
+      <div class="floors-grid">
+
+        <div class="floor-card">
+          <p class="floor-card-label">Level −1 · −2.80m</p>
+          <h3 class="floor-card-title">Lower Level</h3>
+          <p class="floor-card-area"><span id="lowerArea">20.05 m²</span> net · Bedroom</p>
+          <div class="floor-plan-wrap">
+            <img src="plans/suteren-B.png" alt="Lower level floor plan" class="floor-plan-img" id="lowerImg">
+          </div>
+          <ul class="floor-rooms">
+            <li><span class="room-name">Bedroom</span><span class="room-area" data-room="bed-lower">20.05 m²</span></li>
+            <li class="total"><span class="room-name">Net</span><span class="room-area" data-room="net-lower">20.05 m²</span></li>
+          </ul>
+        </div>
+
+        <div class="floor-card">
+          <p class="floor-card-label">Level 0 · ±0.00m</p>
+          <h3 class="floor-card-title">Ground Floor</h3>
+          <p class="floor-card-area"><span id="groundArea">28.83 m²</span> net · Living</p>
+          <div class="floor-plan-wrap">
+            <img src="plans/prizemlje-B.png" alt="Ground floor plan" class="floor-plan-img" id="groundImg">
+          </div>
+          <ul class="floor-rooms">
+            <li><span class="room-name">Living · Kitchen · Dining</span><span class="room-area" data-room="living">20.68 m²</span></li>
+            <li><span class="room-name">Bathroom</span><span class="room-area">3.47 m²</span></li>
+            <li><span class="room-name">Hallway</span><span class="room-area">3.03 m²</span></li>
+            <li><span class="room-name">Stairs</span><span class="room-area">2.54 m²</span></li>
+            <li class="total"><span class="room-name">Net</span><span class="room-area" data-room="net-ground">28.83 m²</span></li>
+          </ul>
+        </div>
+
+        <div class="floor-card">
+          <p class="floor-card-label">Level +1 · +2.80m</p>
+          <h3 class="floor-card-title">Upper Level</h3>
+          <p class="floor-card-area"><span id="upperArea">21.99 m²</span> net · Master</p>
+          <div class="floor-plan-wrap">
+            <img src="plans/potkrovlje-B.png" alt="Upper level floor plan" class="floor-plan-img" id="upperImg">
+          </div>
+          <ul class="floor-rooms">
+            <li><span class="room-name">Master bedroom</span><span class="room-area" data-room="bed-upper">19.95 m²</span></li>
+            <li><span class="room-name">Stairs</span><span class="room-area">2.72 m²</span></li>
+            <li><span class="room-name">Terrace access</span><span class="room-area">south view</span></li>
+            <li class="total"><span class="room-name">Net</span><span class="room-area" data-room="net-upper">21.99 m²</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="residences-cta">
+        <a href="#interest" class="residences-cta-btn">Request detailed plans &amp; pricing</a>
+        <p class="residences-cta-note">Phase 1 · 8 residences total · Opening Winter 2026</p>
+      </div>
+
+      <p class="architect-credit">
+        Architecture by <em>Marko Negovanović</em> · Negovanović Studio
+      </p>
     </div>
   </section>
 
@@ -951,6 +1291,99 @@
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+  <!-- Residences Type A/B Toggle -->
+  <script>
+    (function() {
+      const typeButtons = document.querySelectorAll('.type-btn');
+      if (!typeButtons.length) return;
+
+      const typeMeta = document.getElementById('typeMeta');
+      const statTotal = document.getElementById('statTotal');
+      const lowerArea = document.getElementById('lowerArea');
+      const groundArea = document.getElementById('groundArea');
+      const upperArea = document.getElementById('upperArea');
+      const lowerImg = document.getElementById('lowerImg');
+      const groundImg = document.getElementById('groundImg');
+      const upperImg = document.getElementById('upperImg');
+      const elevationImg = document.getElementById('elevationImg');
+
+      const typeData = {
+        A: {
+          meta: '2 of 8 residences · Compact plan · Phase 1',
+          total: '66.68 m²',
+          lower: '18.66 m²',
+          ground: '27.41 m²',
+          upper: '20.61 m²',
+          images: {
+            lower: 'plans/suteren-A.png',
+            ground: 'plans/prizemlje-A.png',
+            upper: 'plans/potkrovlje-A.png',
+            elevation: 'plans/izgled-A.png'
+          },
+          rooms: {
+            'bed-lower': '18.66 m²',
+            'net-lower': '18.66 m²',
+            'living': '19.22 m²',
+            'net-ground': '27.41 m²',
+            'bed-upper': '18.53 m²',
+            'net-upper': '20.61 m²'
+          }
+        },
+        B: {
+          meta: '6 of 8 residences · Standard plan · Phases 2–4',
+          total: '70.87 m²',
+          lower: '20.05 m²',
+          ground: '28.83 m²',
+          upper: '21.99 m²',
+          images: {
+            lower: 'plans/suteren-B.png',
+            ground: 'plans/prizemlje-B.png',
+            upper: 'plans/potkrovlje-B.png',
+            elevation: 'plans/izgled-B.png'
+          },
+          rooms: {
+            'bed-lower': '20.05 m²',
+            'net-lower': '20.05 m²',
+            'living': '20.68 m²',
+            'net-ground': '28.83 m²',
+            'bed-upper': '19.95 m²',
+            'net-upper': '21.99 m²'
+          }
+        }
+      };
+
+      typeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const type = btn.dataset.type;
+          typeButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const data = typeData[type];
+          if (typeMeta) typeMeta.textContent = data.meta;
+          if (statTotal) statTotal.textContent = data.total;
+          if (lowerArea) lowerArea.textContent = data.lower;
+          if (groundArea) groundArea.textContent = data.ground;
+          if (upperArea) upperArea.textContent = data.upper;
+
+          if (lowerImg) lowerImg.src = data.images.lower;
+          if (groundImg) groundImg.src = data.images.ground;
+          if (upperImg) upperImg.src = data.images.upper;
+          if (elevationImg) elevationImg.src = data.images.elevation;
+
+          Object.keys(data.rooms).forEach(key => {
+            const els = document.querySelectorAll('[data-room="' + key + '"]');
+            els.forEach(el => el.textContent = data.rooms[key]);
+
+            // GA4 event
+            if (typeof gtag === 'function') {
+              gtag('event', 'residence_type_toggle', { type: type });
+            }
+          });
+        });
+      });
+    })();
   </script>
 </body>
 </html>
