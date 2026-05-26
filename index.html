@@ -717,6 +717,83 @@
       .map-iframe-wrap { height: 360px; }
       .map-legend { gap: 14px; padding: 14px 16px; }
     }
+
+    /* ============ THE REGION ============ */
+    .region { background: var(--pine); }
+    .region-intro {
+      max-width: 720px; margin: 0 auto 56px; text-align: center;
+    }
+    .region-intro p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85;
+    }
+    .region-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; max-width: 1100px; margin: 0 auto;
+    }
+    .region-card {
+      padding: 32px 26px;
+      background: rgba(245, 241, 232, 0.025);
+      border: 1px solid rgba(212, 168, 87, 0.2);
+      border-radius: 4px;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .region-card:hover {
+      border-color: rgba(212, 168, 87, 0.45);
+      transform: translateY(-4px);
+    }
+    .region-card-icon {
+      font-size: 2rem; line-height: 1; margin-bottom: 18px;
+      filter: grayscale(0.1);
+    }
+    .region-card-headline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem; font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 0.02em;
+      margin-bottom: 10px; line-height: 1.2;
+    }
+    .region-card-label {
+      font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.65;
+      margin-bottom: 14px;
+    }
+    .region-card-desc {
+      font-size: 0.875rem; line-height: 1.65;
+      color: var(--cream); opacity: 0.78;
+    }
+    .region-quote {
+      max-width: 800px; margin: 72px auto 0;
+      padding: 36px 32px;
+      border-left: 2px solid var(--gold);
+      background: rgba(245, 241, 232, 0.03);
+      border-radius: 0 4px 4px 0;
+    }
+    .region-quote-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.25rem, 2.4vw, 1.625rem);
+      font-style: italic; font-weight: 300;
+      line-height: 1.55;
+      color: var(--cream); opacity: 0.92;
+      margin-bottom: 18px;
+    }
+    .region-quote-attribution {
+      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); opacity: 0.85;
+    }
+    .region-sources {
+      max-width: 800px; margin: 48px auto 0;
+      text-align: center;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      color: var(--cream); opacity: 0.45;
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+      .region-grid { grid-template-columns: 1fr; gap: 18px; }
+      .region-card { padding: 24px 20px; }
+      .region-quote { padding: 28px 22px; }
+    }
     .interest { background: linear-gradient(180deg, var(--pine) 0%, var(--pine-light) 100%); }
     .interest-form { max-width: 560px; margin: 0 auto; }
     .form-row { margin-bottom: 20px; }
@@ -1209,6 +1286,75 @@
 
       <p class="architect-credit">
         Architecture by <em>Marko Negovanović</em> · Negovanović Studio
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ THE REGION ============ -->
+  <section class="region">
+    <div class="container">
+      <p class="section-label">The Region</p>
+      <h2 class="section-title">A mountain on the rise</h2>
+      <p class="section-subtitle">Zlatibor is in the middle of its biggest transformation in a generation. Your residence is built into that wave.</p>
+      <div class="section-divider"></div>
+
+      <div class="region-intro">
+        <p>Already Serbia's second-most-visited destination after Belgrade, the mountain is now adding world-record infrastructure and global air access — while protecting the forest that defines it.</p>
+      </div>
+
+      <div class="region-grid">
+
+        <div class="region-card">
+          <div class="region-card-icon">🛫</div>
+          <p class="region-card-label">Coming · Spring 2026</p>
+          <h3 class="region-card-headline">New Zlatibor Airport</h3>
+          <p class="region-card-desc">Construction starts spring 2026 on a 200-hectare site. A 2.5 km runway will eventually receive charter flights, opening Zlatibor to direct international tourism for the first time.</p>
+        </div>
+
+        <div class="region-card">
+          <div class="region-card-icon">🚠</div>
+          <p class="region-card-label">Operating · World Record</p>
+          <h3 class="region-card-headline">Gold Gondola</h3>
+          <p class="region-card-desc">The world's longest panoramic gondola — 9 km from village centre to Tornik peak via Lake Ribničko. 25-minute journey, 1,200 passengers per hour. Officially opened January 2021.</p>
+        </div>
+
+        <div class="region-card">
+          <div class="region-card-icon">📈</div>
+          <p class="region-card-label">2025 · Tourism Record</p>
+          <h3 class="region-card-headline">1.3M overnight stays</h3>
+          <p class="region-card-desc">Expected for 2025 — up from 1.2M in 2024 and 1M in 2023. A 30% rise in three years, with foreign visitors growing fastest. Zlatibor is the most visited mountain in Serbia.</p>
+        </div>
+
+        <div class="region-card">
+          <div class="region-card-icon">🌲</div>
+          <p class="region-card-label">Protected · 98%</p>
+          <h3 class="region-card-headline">Less than 2% urbanised</h3>
+          <p class="region-card-desc">Despite record visitor numbers, only a fraction of the 39 km² mountain area is built up. Strict planning rules and traditional architecture requirements preserve the pine forest character.</p>
+        </div>
+
+        <div class="region-card">
+          <div class="region-card-icon">🏔</div>
+          <p class="region-card-label">National Ranking</p>
+          <h3 class="region-card-headline">#2 destination in Serbia</h3>
+          <p class="region-card-desc">After Belgrade, Zlatibor draws more international visitors than any other location. Strongest source markets in 2025: Turkey, China (+24% YoY), Russia, Romania, Bosnia, Poland.</p>
+        </div>
+
+        <div class="region-card">
+          <div class="region-card-icon">🏨</div>
+          <p class="region-card-label">Planned · Major Projects</p>
+          <h3 class="region-card-headline">Balkans' largest adventure park</h3>
+          <p class="region-card-desc">A 1,000 m² adventure park is planned around the village centre, with the high-end "Gold City" resort coming to Lake Ribničko — water sports, wellness, recreation, year-round.</p>
+        </div>
+
+      </div>
+
+      <blockquote class="region-quote">
+        <p class="region-quote-text">"Zlatibor has emerged as one of the most desirable destinations for luxury real-estate investment in Serbia. Rapid infrastructure development, contemporary residential complexes, and growing tourist demand have positioned this mountain region as exceptionally attractive for long-term, secure investments."</p>
+        <p class="region-quote-attribution">— ALK Real Estate · November 2025</p>
+      </blockquote>
+
+      <p class="region-sources">
+        Sources: Zlatibor Tourism Organization · Republic Statistical Office of Serbia · Municipality of Čajetina · eKapija · POMA (gondola manufacturer)
       </p>
     </div>
   </section>
