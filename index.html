@@ -794,6 +794,189 @@
       .region-card { padding: 24px 20px; }
       .region-quote { padding: 28px 22px; }
     }
+
+    /* ============ THE INVESTMENT ============ */
+    .investment { background: var(--pine-dark); }
+    .investment-intro { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+    .investment-intro p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85;
+    }
+    .investment-pillars {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 28px; max-width: 1000px; margin: 0 auto;
+    }
+    .investment-card {
+      padding: 36px 30px;
+      background: linear-gradient(135deg, rgba(212, 168, 87, 0.08) 0%, rgba(212, 168, 87, 0.02) 100%);
+      border: 1px solid rgba(212, 168, 87, 0.25);
+      border-radius: 4px;
+    }
+    .investment-card-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400;
+      color: var(--gold); line-height: 1; margin-bottom: 10px;
+    }
+    .investment-card-label {
+      font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.65;
+      margin-bottom: 18px;
+    }
+    .investment-card-headline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.375rem; color: var(--cream); font-weight: 400;
+      margin-bottom: 12px; line-height: 1.3;
+    }
+    .investment-card-desc {
+      font-size: 0.9375rem; color: var(--cream); opacity: 0.8;
+      line-height: 1.65;
+    }
+    .investment-disclaimer {
+      max-width: 800px; margin: 56px auto 0;
+      text-align: center;
+      font-size: 0.7rem; letter-spacing: 0.08em;
+      color: var(--cream); opacity: 0.4;
+      line-height: 1.7;
+    }
+
+    /* ============ THE LIFESTYLE ============ */
+    .lifestyle { background: linear-gradient(180deg, var(--pine-dark) 0%, var(--pine) 100%); }
+    .lifestyle-intro { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+    .lifestyle-intro p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85;
+    }
+    .seasons-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 32px; max-width: 1100px; margin: 0 auto;
+    }
+    .season-card {
+      padding: 40px 32px;
+      background: rgba(245, 241, 232, 0.025);
+      border: 1px solid rgba(212, 168, 87, 0.2);
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+    }
+    .season-card:hover { border-color: rgba(212, 168, 87, 0.45); }
+    .season-card-icon {
+      font-size: 2.5rem; line-height: 1; margin-bottom: 20px;
+    }
+    .season-card-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 400;
+      color: var(--gold); letter-spacing: 0.03em;
+      margin-bottom: 8px;
+    }
+    .season-card-months {
+      font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.55;
+      margin-bottom: 24px;
+    }
+    .season-card-desc {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.0625rem; font-style: italic; font-weight: 300;
+      color: var(--cream); opacity: 0.85;
+      line-height: 1.7; margin-bottom: 24px;
+    }
+    .season-activities { list-style: none; padding: 0; margin: 0; }
+    .season-activities li {
+      padding: 10px 0;
+      font-size: 0.9rem;
+      color: var(--cream); opacity: 0.78;
+      border-bottom: 1px solid rgba(245, 241, 232, 0.05);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .season-activities li:last-child { border-bottom: none; }
+    .season-activities li::before {
+      content: '·';
+      color: var(--gold); opacity: 0.7;
+      font-size: 1.5rem; line-height: 0.5;
+    }
+
+    /* ============ FAQ ============ */
+    .faq { background: var(--pine-dark); }
+    .faq-intro { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+    .faq-intro p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 300; line-height: 1.8;
+      color: var(--cream); opacity: 0.85;
+    }
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid rgba(245, 241, 232, 0.08);
+    }
+    .faq-item:first-of-type { border-top: 1px solid rgba(245, 241, 232, 0.08); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      padding: 24px 0;
+      display: flex; justify-content: space-between; align-items: center;
+      text-align: left;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 400;
+      color: var(--cream); opacity: 0.92;
+      transition: color 0.25s ease;
+      letter-spacing: 0.01em;
+    }
+    .faq-question:hover { color: var(--gold); opacity: 1; }
+    .faq-question .faq-icon {
+      flex-shrink: 0; margin-left: 24px;
+      width: 28px; height: 28px;
+      border: 1px solid rgba(212, 168, 87, 0.5);
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--gold);
+      font-size: 1.125rem; line-height: 1;
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 500px; }
+    .faq-answer-inner {
+      padding: 0 0 24px 0;
+      font-size: 0.9375rem; line-height: 1.75;
+      color: var(--cream); opacity: 0.78;
+      max-width: 95%;
+    }
+    .faq-answer-inner a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(212, 168, 87, 0.3); }
+    .faq-answer-inner a:hover { border-bottom-color: var(--gold); }
+    .faq-cta {
+      max-width: 600px; margin: 56px auto 0;
+      text-align: center;
+      padding: 32px 24px;
+      background: rgba(212, 168, 87, 0.06);
+      border: 1px solid rgba(212, 168, 87, 0.25);
+      border-radius: 4px;
+    }
+    .faq-cta p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.125rem; font-style: italic;
+      color: var(--cream); opacity: 0.9;
+      margin-bottom: 16px;
+    }
+    .faq-cta-btn {
+      display: inline-block;
+      background: var(--gold); color: var(--pine);
+      padding: 14px 32px; border-radius: 100px;
+      font-family: 'Inter', sans-serif; font-size: 0.75rem;
+      font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .faq-cta-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    @media (max-width: 768px) {
+      .investment-pillars { grid-template-columns: 1fr; gap: 18px; }
+      .investment-card { padding: 28px 22px; }
+      .seasons-grid { grid-template-columns: 1fr; gap: 20px; }
+      .season-card { padding: 28px 22px; }
+      .faq-question { font-size: 1rem; padding: 20px 0; }
+      .faq-question .faq-icon { width: 24px; height: 24px; font-size: 1rem; }
+    }
     .interest { background: linear-gradient(180deg, var(--pine) 0%, var(--pine-light) 100%); }
     .interest-form { max-width: 560px; margin: 0 auto; }
     .form-row { margin-bottom: 20px; }
@@ -1359,6 +1542,261 @@
     </div>
   </section>
 
+  <!-- ============ THE INVESTMENT ============ -->
+  <section class="investment">
+    <div class="container">
+      <p class="section-label">The Investment</p>
+      <h2 class="section-title">Why now</h2>
+      <p class="section-subtitle">Buying a residence at Tornik View is not just a home in the mountains — it is a position in one of the fastest-growing premium markets in the region, captured before the next wave.</p>
+      <div class="section-divider"></div>
+
+      <div class="investment-intro">
+        <p>Zlatibor real estate values have climbed steadily since 2019, and the next five years will bring an airport, expanded ski infrastructure, and the high-end Gold City resort. Phase One residences are released at pre-completion prices.</p>
+      </div>
+
+      <div class="investment-pillars">
+
+        <div class="investment-card">
+          <div class="investment-card-num">+30%</div>
+          <p class="investment-card-label">Tourism Growth · 3 Years</p>
+          <h3 class="investment-card-headline">Visitor numbers rising fast</h3>
+          <p class="investment-card-desc">Overnight stays grew from 1.0M (2023) to 1.2M (2024) to an expected 1.3M+ in 2025. With the new airport unlocking charter flights, the trajectory points sharply higher.</p>
+        </div>
+
+        <div class="investment-card">
+          <div class="investment-card-num">8 of 8</div>
+          <p class="investment-card-label">Limited Supply</p>
+          <h3 class="investment-card-headline">A finite project</h3>
+          <p class="investment-card-desc">Tornik View is intentionally small — eight residences across four buildings, with no further expansion possible on the site. Scarcity by design, in a market trending toward over-supply in standard segments.</p>
+        </div>
+
+        <div class="investment-card">
+          <div class="investment-card-num">Pre-Build</div>
+          <p class="investment-card-label">Phase 1 · Best Pricing</p>
+          <h3 class="investment-card-headline">Reserve before completion</h3>
+          <p class="investment-card-desc">Early reservations secure the lowest entry price. Pricing rises with each phase and again at completion. Phase 1 (two residences) opens Winter 2026.</p>
+        </div>
+
+        <div class="investment-card">
+          <div class="investment-card-num">Year Round</div>
+          <p class="investment-card-label">Rental Potential</p>
+          <h3 class="investment-card-headline">Demand in every season</h3>
+          <p class="investment-card-desc">Unlike single-season ski destinations, Zlatibor receives visitors all twelve months — winter skiing, spring trails, summer escape from city heat, autumn hiking. Strong rental demand year-round.</p>
+        </div>
+
+      </div>
+
+      <p class="investment-disclaimer">
+        Information provided is for general guidance. Real-estate investment carries risk and past performance does not guarantee future results. Tax, ownership, and rental conditions for foreign buyers are explained in our FAQ section below and confirmed in writing during the reservation process.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ THE LIFESTYLE ============ -->
+  <section class="lifestyle">
+    <div class="container">
+      <p class="section-label">The Lifestyle</p>
+      <h2 class="section-title">A mountain for every season</h2>
+      <p class="section-subtitle">Zlatibor is not a winter resort that empties in April. It is a year-round mountain, and your residence is built for both halves of the calendar.</p>
+      <div class="section-divider"></div>
+
+      <div class="lifestyle-intro">
+        <p>The same residence that holds snow on the roof in February opens its south façade to long summer light in July. Your weekends here look different every season — and that variety is part of the value.</p>
+      </div>
+
+      <div class="seasons-grid">
+
+        <div class="season-card">
+          <div class="season-card-icon">❄</div>
+          <h3 class="season-card-title">Winter</h3>
+          <p class="season-card-months">December — March</p>
+          <p class="season-card-desc">Snow on the pines, smoke from the chimney, the Gold Gondola rising silently into a white sky. Ski boots by the door.</p>
+          <ul class="season-activities">
+            <li>Tornik ski centre — 5 km, or 25 min by gondola</li>
+            <li>Cross-country skiing on quiet forest trails</li>
+            <li>Snowshoe walks along the Crni Rzav</li>
+            <li>Fireside evenings in your triplex</li>
+            <li>Traditional Zlatibor New Year</li>
+          </ul>
+        </div>
+
+        <div class="season-card">
+          <div class="season-card-icon">🌲</div>
+          <h3 class="season-card-title">Summer</h3>
+          <p class="season-card-months">June — September</p>
+          <p class="season-card-desc">An escape from the heat of Belgrade and the coast. Pine forest at 950m. Mornings cool enough for coffee on the terrace, days warm enough for the river.</p>
+          <ul class="season-activities">
+            <li>Hiking trails through the pine forest</li>
+            <li>Crni Rzav swimming and fishing — 300m away</li>
+            <li>Mountain biking on dedicated routes</li>
+            <li>Lake Ribničko water sports — 3 km</li>
+            <li>Cooler nights, perfect for sleep</li>
+          </ul>
+        </div>
+
+        <div class="season-card">
+          <div class="season-card-icon">🌸</div>
+          <h3 class="season-card-title">Spring</h3>
+          <p class="season-card-months">April — May</p>
+          <p class="season-card-desc">The mountain wakes. Wildflowers in the meadows, the air sharp with pine resin. Tourist numbers are low. The forest is yours.</p>
+          <ul class="season-activities">
+            <li>First long walks of the year</li>
+            <li>Birdwatching as migrants return</li>
+            <li>Lower visitor numbers, full peace</li>
+            <li>Spring fishing on the Crni Rzav</li>
+            <li>The gondola without the crowds</li>
+          </ul>
+        </div>
+
+        <div class="season-card">
+          <div class="season-card-icon">🍂</div>
+          <h3 class="season-card-title">Autumn</h3>
+          <p class="season-card-months">October — November</p>
+          <p class="season-card-desc">Possibly the mountain's best-kept secret. Golden light through the pines, mushroom season in the forest, woodsmoke in cooler air.</p>
+          <ul class="season-activities">
+            <li>Mushroom and chestnut foraging</li>
+            <li>Long hikes in cool, clear weather</li>
+            <li>Local harvest food and rakija</li>
+            <li>Photography in the autumn forest</li>
+            <li>Quiet weekends before winter</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq">
+    <div class="container">
+      <p class="section-label">Questions</p>
+      <h2 class="section-title">Before you reserve</h2>
+      <p class="section-subtitle">The questions we are asked most often by prospective owners — answered clearly, upfront.</p>
+      <div class="section-divider"></div>
+
+      <div class="faq-intro">
+        <p>If your question isn't here, please write to us directly. We answer every inquiry personally.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Can foreigners buy property in Serbia?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. Serbia allows foreign nationals to purchase real estate on a reciprocity basis — meaning if your country permits Serbian citizens to buy property there, you can buy here. This includes all EU nationals, UK, US, Russia, China, and most of the world. The transaction takes place at a Serbian notary, registered in the cadastre under your name.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            What is the payment schedule?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Reservation deposit secures your unit and locks the price. Subsequent payments are tied to construction milestones (foundations, roof, finishes, handover) — usually four to five staged payments over 12-18 months. Final payment is at handover, against the cadastre transfer. Full schedule confirmed in your reservation contract.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            What is included in the price?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The price includes the triplex residence built to architect's specification, the share of the building's exterior and roof, your private terrace, and the proportional share of the plot. Internal finishes (flooring, bathroom tiles, kitchen) are at standard specification — upgrades available. Furniture, white goods, and outdoor parking arrangements are detailed separately in the reservation pack.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            What about taxes and ongoing costs?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Property transfer tax in Serbia is currently 2.5% of the contract price for resale, but new-build purchases from a developer typically include VAT instead. Annual property tax is modest — usually well under €500/year for a residence of this size. We provide a full tax estimate during reservation, and recommend you consult an independent Serbian tax advisor.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Can I rent the residence out when I'm not using it?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. Owners may use the residence privately, rent it short-term (Airbnb/Booking.com), or arrange longer leases. Zlatibor has strong year-round rental demand, with peak rates during ski season (December–March) and summer (July–August). We can recommend local property management partners who handle bookings, cleaning, and guest communications on owners' behalf.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            How is the building maintained in winter?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              All four buildings are designed for mountain winters — insulated sandwich-panel construction, snow-rated roof loading, frost-protected plumbing. A shared maintenance fee covers snow clearing on shared paths, exterior care, gutters, and common-area utilities. Inside your residence, you control heating independently. Estimated annual maintenance fee is provided during reservation.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Who is the developer?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Tornik View is developed by <strong>RFBT Limited</strong>, a UK-registered company (London). The architect is <strong>Marko Negovanović</strong> of Negovanović Studio, a licensed Serbian architect (license 321 A187 23) with a portfolio of mountain residential projects. Project documentation, building permits, and corporate registration are available to serious buyers during the reservation process.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            When will Phase 1 be ready?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Phase 1 includes the first two residences (Type A), opening Winter 2026. Phases 2–4 each add two residences (Type B), with the full eight-residence project complete by 2027. We send construction updates and on-site photographs to all reserved owners throughout the build.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Can I visit the site before reserving?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes — site visits are warmly encouraged for serious prospective owners. We will meet you at Kobilja Glava, walk the plot, show you the surrounding forest and river, and answer any questions in person. Please request a viewing through the form below — we coordinate visits especially during weekends.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="faq-cta">
+        <p>Have a question we haven't answered?</p>
+        <a href="#interest" class="faq-cta-btn">Ask us directly</a>
+      </div>
+    </div>
+  </section>
+
   <section class="location-sec">
     <div class="container">
       <p class="section-label">The Location</p>
@@ -1702,6 +2140,36 @@
         if (typeof gtag === 'function') {
           gtag('event', 'map_view_toggle', { view: isSatellite ? 'satellite' : 'map' });
         }
+      });
+    })();
+  </script>
+
+  <!-- FAQ Accordion -->
+  <script>
+    (function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      if (!faqItems.length) return;
+
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          // Close all other items first
+          faqItems.forEach(other => {
+            other.classList.remove('open');
+            const ob = other.querySelector('.faq-question');
+            if (ob) ob.setAttribute('aria-expanded', 'false');
+          });
+          // Toggle current
+          if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+            if (typeof gtag === 'function') {
+              gtag('event', 'faq_open', { question: btn.textContent.trim().substring(0, 60) });
+            }
+          }
+        });
       });
     })();
   </script>
