@@ -63,7 +63,7 @@
     "image": "https://tornikview.com/clouds-hero.jpg",
     "url": "https://tornikview.com",
     "telephone": "+381-63-8080000",
-    "email": "stay@tornikview.com",
+    "email": "invest@tornikview.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Kobilja Glava",
@@ -1882,8 +1882,6 @@
           <select id="interest" name="interest" required>
             <option value="">Izaberite…</option>
             <option value="ownership">Vlasništvo — kupovina rezidencije</option>
-            <option value="stay">Boravak — iznajmljivanje</option>
-            <option value="both">Oboje — vlasništvo i odmaralište</option>
             <option value="info">Samo informacije za sada</option>
           </select>
         </div>
@@ -1930,13 +1928,13 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         <span>Facebook</span>
       </a>
-      <a href="mailto:stay@tornikview.com" aria-label="Email">
+      <a href="mailto:invest@tornikview.com" aria-label="Email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         <span>Email</span>
       </a>
     </div>
     <p class="footer-contact">
-      Kobilja Glava · Zlatibor · Serbia · <a href="mailto:stay@tornikview.com">stay@tornikview.com</a>
+      Kobilja Glava · Zlatibor · Serbia · <a href="mailto:invest@tornikview.com">invest@tornikview.com</a>
     </p>
     <div class="footer-links">
       <a href="/privacy.html">Politiku privatnosti</a>
@@ -1981,6 +1979,7 @@
           access_key: WEB3FORMS_ACCESS_KEY,
           subject: '🔔 New Email Signup — Tornik View',
           from_name: 'Tornik View Website',
+          replyto: email,
           form_type: 'Email Signup',
           email: email,
           botcheck: botcheck
@@ -2041,8 +2040,6 @@
       interestBtn.textContent = 'Šaljem...';
       const interestLabels = {
         ownership: 'Vlasništvo — kupovina rezidencije',
-        stay: 'Boravak — iznajmljivanje',
-        both: 'Oboje — vlasništvo i odmaralište',
         info: 'Samo informacije za sada'
       };
       try {
@@ -2050,6 +2047,7 @@
           access_key: WEB3FORMS_ACCESS_KEY,
           subject: '✨ New Reservation Enquiry — ' + name,
           from_name: 'Tornik View Website',
+          replyto: formEmail,
           form_type: 'Reservation Enquiry',
           name: name, email: formEmail,
           phone: phone || '(not provided)',
@@ -2263,5 +2261,174 @@
       });
     })();
   </script>
+
+<!-- ============ WHATSAPP FLOATING BUTTON ============ -->
+<a
+  href="https://wa.me/381638080000?text=Hi%20%2F%20Zdravo!%20Interested%20in%20Tornik%20View%20residences%20%E2%80%94%20zainteresovan%20za%20Tornik%20View%20rezidencije."
+  target="_blank"
+  rel="noopener"
+  class="whatsapp-float"
+  id="whatsappFloat"
+  aria-label="Razgovarajte sa nama na WhatsApp-u"
+  onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{event_category:'engagement',event_label:'floating_button'});}">
+  <svg class="whatsapp-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.834.736 5.595 2.137 8.027L.057 32l7.785-2.043a15.91 15.91 0 0 0 8.158 2.234h.007C24.836 32.191 32 25.027 32 16.19 32 7.354 24.836.396 16 .396zm0 29.21h-.006a13.25 13.25 0 0 1-6.755-1.85l-.485-.288-5.026 1.318 1.342-4.9-.316-.502a13.21 13.21 0 0 1-2.027-7.087c0-7.31 5.95-13.259 13.273-13.259 3.544 0 6.876 1.382 9.382 3.889a13.16 13.16 0 0 1 3.882 9.378c0 7.31-5.952 13.301-13.264 13.301zm7.279-9.939c-.4-.2-2.362-1.165-2.727-1.298-.366-.133-.632-.2-.898.2-.266.4-1.03 1.298-1.263 1.564-.233.266-.466.3-.866.1-.4-.2-1.686-.622-3.21-1.982-1.187-1.058-1.987-2.366-2.22-2.766-.232-.4-.025-.616.175-.815.18-.18.4-.466.6-.7.2-.232.266-.4.4-.666.133-.266.066-.499-.033-.7-.1-.2-.898-2.166-1.232-2.965-.323-.776-.652-.672-.898-.683l-.766-.013c-.266 0-.7.1-1.064.5s-1.398 1.366-1.398 3.331c0 1.965 1.432 3.864 1.632 4.13.2.266 2.815 4.3 6.823 6.029.953.412 1.696.658 2.276.84.956.305 1.826.262 2.514.16.767-.114 2.362-.965 2.694-1.897.333-.932.333-1.731.233-1.897-.1-.166-.366-.266-.766-.466z"/>
+  </svg>
+  <span class="whatsapp-tooltip" id="whatsappTooltip">Pišite nam →</span>
+</a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    background: var(--pine-dark, #1a2e26);
+    border: 1.5px solid rgba(212, 168, 87, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(212, 168, 87, 0.4);
+    z-index: 9998;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    animation: whatsappPulse 2.5s ease-in-out infinite, whatsappFadeIn 0.6s ease-out 1.5s both;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.08);
+    border-color: rgba(212, 168, 87, 1);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 0 0 0 8px rgba(212, 168, 87, 0.12);
+  }
+  .whatsapp-float:active { transform: scale(0.96); }
+  .whatsapp-icon {
+    width: 30px;
+    height: 30px;
+    fill: var(--gold, #D4A857);
+    transition: fill 0.3s ease;
+  }
+  .whatsapp-float:hover .whatsapp-icon { fill: var(--gold-light, #E8B96A); }
+  .whatsapp-tooltip {
+    position: absolute;
+    right: 72px;
+    top: 50%;
+    transform: translateY(-50%) translateX(8px);
+    background: rgba(26, 46, 38, 0.97);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 168, 87, 0.35);
+    color: var(--cream, #F5F1E8);
+    padding: 10px 16px;
+    border-radius: 100px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0.35s;
+    pointer-events: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  .whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: rgba(26, 46, 38, 0.97);
+    border-right: 1px solid rgba(212, 168, 87, 0.35);
+    border-top: 1px solid rgba(212, 168, 87, 0.35);
+  }
+  .whatsapp-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0s;
+  }
+  .whatsapp-float.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7) translateY(20px);
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s, transform 0.3s ease;
+  }
+  @keyframes whatsappPulse {
+    0%, 100% { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(212, 168, 87, 0.4); }
+    50% { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 12px rgba(212, 168, 87, 0); }
+  }
+  @keyframes whatsappFadeIn {
+    from { opacity: 0; transform: scale(0.5) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      width: 54px;
+      height: 54px;
+      bottom: 18px;
+      right: 18px;
+    }
+    .whatsapp-icon { width: 26px; height: 26px; }
+    .whatsapp-tooltip { display: none; }
+  }
+  @media (max-width: 480px) {
+    .whatsapp-float {
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    const waFloat = document.getElementById('whatsappFloat');
+    const waTooltip = document.getElementById('whatsappTooltip');
+    if (!waFloat || !waTooltip) return;
+
+    // Show tooltip after 8 seconds, hide after 6 more
+    setTimeout(() => {
+      waTooltip.classList.add('show');
+      setTimeout(() => waTooltip.classList.remove('show'), 6000);
+    }, 8000);
+
+    // Show tooltip on hover (desktop)
+    waFloat.addEventListener('mouseenter', () => waTooltip.classList.add('show'));
+    waFloat.addEventListener('mouseleave', () => waTooltip.classList.remove('show'));
+
+    // Hide button when user is filling out form (don't block UX)
+    const interestForm = document.getElementById('interestForm');
+    if (interestForm) {
+      const formInputs = interestForm.querySelectorAll('input, select, textarea');
+      formInputs.forEach(input => {
+        input.addEventListener('focus', () => waFloat.classList.add('hidden'));
+        input.addEventListener('blur', () => {
+          setTimeout(() => {
+            const activeEl = document.activeElement;
+            if (!interestForm.contains(activeEl)) {
+              waFloat.classList.remove('hidden');
+            }
+          }, 200);
+        });
+      });
+    }
+
+    // Hide on cookie banner visibility
+    const cookieBanner = document.getElementById('cookieBanner');
+    if (cookieBanner) {
+      const observer = new MutationObserver(() => {
+        if (cookieBanner.classList.contains('show')) {
+          waFloat.classList.add('hidden');
+        } else {
+          waFloat.classList.remove('hidden');
+        }
+      });
+      observer.observe(cookieBanner, { attributes: true, attributeFilter: ['class'] });
+    }
+  })();
+</script>
+
+
 </body>
 </html>
