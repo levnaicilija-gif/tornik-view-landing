@@ -1204,6 +1204,21 @@
   </style>
 </head>
 <body>
+<script>
+  // Fix: prevent refresh from preserving #interest scroll position
+  // If page is reloaded (not navigated to), clear hash and scroll to top
+  if (window.performance && window.performance.getEntriesByType) {
+    const navEntries = window.performance.getEntriesByType('navigation');
+    if (navEntries.length > 0 && navEntries[0].type === 'reload') {
+      // It's a reload - clear hash and scroll to top
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+        window.scrollTo(0, 0);
+      }
+    }
+  }
+</script>
+
 
   <!-- Language Switcher -->
   <nav class="lang-switcher" aria-label="Language">
@@ -1844,7 +1859,7 @@
     </div>
   </section>
 
-  <section class="interest">
+  <section class="interest" id="interest">
     <div class="container">
       <p class="section-label">Register Your Interest</p>
       <h2 class="section-title">Reserve a residence</h2>
@@ -1866,8 +1881,8 @@
           </div>
         </div>
         <div class="form-row">
-          <label for="interest">Interest</label>
-          <select id="interest" name="interest" required>
+          <label for="interestSelect">Interest</label>
+          <select id="interestSelect" name="interest" required>
             <option value="">Select…</option>
             <option value="ownership">Ownership — interested in buying a residence</option>
             <option value="info">Just information for now</option>
@@ -2008,7 +2023,7 @@
       const name = document.getElementById('name').value.trim();
       const formEmail = document.getElementById('formEmail').value.trim();
       const phone = document.getElementById('phone').value.trim();
-      const interest = document.getElementById('interest').value;
+      const interest = document.getElementById('interestSelect').value;
       const message = document.getElementById('message').value.trim();
       const botcheck = interestForm.querySelector('input[name="botcheck"]').checked;
       if (!name || !formEmail || !interest) {
