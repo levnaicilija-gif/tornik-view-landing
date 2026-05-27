@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- HOMEPAGES -->
   <url>
     <loc>https://tornikview.com/</loc>
     <lastmod>2026-05-27</lastmod>
@@ -35,6 +36,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tornikview.com/"/>
   </url>
 
+  <!-- BLOG LANDINGS -->
   <url>
     <loc>https://tornikview.com/blog/</loc>
     <lastmod>2026-05-27</lastmod>
@@ -68,6 +70,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tornikview.com/blog/"/>
   </url>
 
+  <!-- ARTICLE 1: FOREIGNER BUYING GUIDE -->
   <url>
     <loc>https://tornikview.com/blog/buying-property-serbia-foreigners-2026/</loc>
     <lastmod>2026-05-27</lastmod>
@@ -101,6 +104,75 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tornikview.com/blog/buying-property-serbia-foreigners-2026/"/>
   </url>
 
+  <!-- ARTICLE 2: ZLATIBOR AIRPORT -->
+  <url>
+    <loc>https://tornikview.com/blog/zlatibor-airport-2026-property-impact/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tornikview.com/blog/zlatibor-airport-2026-property-impact/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://tornikview.com/sr/blog/zlatibor-aerodrom-2026-uticaj-na-nekretnine/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tornikview.com/ru/blog/aeroport-zlatibor-2026-vliyanie-na-nedvizhimost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tornikview.com/blog/zlatibor-airport-2026-property-impact/"/>
+  </url>
+
+  <url>
+    <loc>https://tornikview.com/sr/blog/zlatibor-aerodrom-2026-uticaj-na-nekretnine/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tornikview.com/blog/zlatibor-airport-2026-property-impact/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://tornikview.com/sr/blog/zlatibor-aerodrom-2026-uticaj-na-nekretnine/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tornikview.com/ru/blog/aeroport-zlatibor-2026-vliyanie-na-nedvizhimost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tornikview.com/blog/zlatibor-airport-2026-property-impact/"/>
+  </url>
+
+  <url>
+    <loc>https://tornikview.com/ru/blog/aeroport-zlatibor-2026-vliyanie-na-nedvizhimost/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tornikview.com/blog/zlatibor-airport-2026-property-impact/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://tornikview.com/sr/blog/zlatibor-aerodrom-2026-uticaj-na-nekretnine/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tornikview.com/ru/blog/aeroport-zlatibor-2026-vliyanie-na-nedvizhimost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tornikview.com/blog/zlatibor-airport-2026-property-impact/"/>
+  </url>
+
+  <!-- ARTICLE 3: GOLD GONDOLA -->
+  <url>
+    <loc>https://tornikview.com/blog/gold-gondola-zlatibor-real-estate-impact/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tornikview.com/blog/gold-gondola-zlatibor-real-estate-impact/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://tornikview.com/sr/blog/zlatna-gondola-zlatibor-uticaj-na-nekretnine/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tornikview.com/ru/blog/zolotaya-gondola-zlatibor-vliyanie-na-nedvizhimost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tornikview.com/blog/gold-gondola-zlatibor-real-estate-impact/"/>
+  </url>
+
+  <url>
+    <loc>https://tornikview.com/sr/blog/zlatna-gondola-zlatibor-uticaj-na-nekretnine/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tornikview.com/blog/gold-gondola-zlatibor-real-estate-impact/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://tornikview.com/sr/blog/zlatna-gondola-zlatibor-uticaj-na-nekretnine/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tornikview.com/ru/blog/zolotaya-gondola-zlatibor-vliyanie-na-nedvizhimost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tornikview.com/blog/gold-gondola-zlatibor-real-estate-impact/"/>
+  </url>
+
+  <url>
+    <loc>https://tornikview.com/ru/blog/zolotaya-gondola-zlatibor-vliyanie-na-nedvizhimost/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tornikview.com/blog/gold-gondola-zlatibor-real-estate-impact/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://tornikview.com/sr/blog/zlatna-gondola-zlatibor-uticaj-na-nekretnine/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tornikview.com/ru/blog/zolotaya-gondola-zlatibor-vliyanie-na-nedvizhimost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tornikview.com/blog/gold-gondola-zlatibor-real-estate-impact/"/>
+  </url>
+
+  <!-- PRIVACY -->
   <url>
     <loc>https://tornikview.com/privacy.html</loc>
     <lastmod>2026-05-26</lastmod>
