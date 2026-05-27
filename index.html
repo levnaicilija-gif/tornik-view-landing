@@ -63,7 +63,7 @@
     "image": "https://tornikview.com/clouds-hero.jpg",
     "url": "https://tornikview.com",
     "telephone": "+381-63-8080000",
-    "email": "stay@tornikview.com",
+    "email": "invest@tornikview.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Kobilja Glava",
@@ -1576,15 +1576,15 @@
 
         <div class="investment-card">
           <div class="investment-card-num">Year Round</div>
-          <p class="investment-card-label">Rental Potential</p>
-          <h3 class="investment-card-headline">Demand in every season</h3>
-          <p class="investment-card-desc">Unlike single-season ski destinations, Zlatibor receives visitors all twelve months — winter skiing, spring trails, summer escape from city heat, autumn hiking. Strong rental demand year-round.</p>
+          <p class="investment-card-label">Four-Season Appeal</p>
+          <h3 class="investment-card-headline">A mountain in every season</h3>
+          <p class="investment-card-desc">Unlike single-season ski destinations, Zlatibor receives visitors all twelve months — winter skiing, spring trails, summer escape from city heat, autumn hiking. Year-round value, year-round use.</p>
         </div>
 
       </div>
 
       <p class="investment-disclaimer">
-        Information provided is for general guidance. Real-estate investment carries risk and past performance does not guarantee future results. Tax, ownership, and rental conditions for foreign buyers are explained in our FAQ section below and confirmed in writing during the reservation process.
+        Information provided is for general guidance. Real-estate investment carries risk and past performance does not guarantee future results. Tax and ownership conditions for foreign buyers are explained in our FAQ section below and confirmed in writing during the reservation process.
       </p>
     </div>
   </section>
@@ -1721,18 +1721,6 @@
           <div class="faq-answer">
             <div class="faq-answer-inner">
               Property transfer tax in Serbia is currently 2.5% of the contract price for resale, but new-build purchases from a developer typically include VAT instead. Annual property tax is modest — usually well under €500/year for a residence of this size. We provide a full tax estimate during reservation, and recommend you consult an independent Serbian tax advisor.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            Can I rent the residence out when I'm not using it?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes. Owners may use the residence privately, rent it short-term (Airbnb/Booking.com), or arrange longer leases. Zlatibor has strong year-round rental demand, with peak rates during ski season (December–March) and summer (July–August). We can recommend local property management partners who handle bookings, cleaning, and guest communications on owners' behalf.
             </div>
           </div>
         </div>
@@ -1882,8 +1870,6 @@
           <select id="interest" name="interest" required>
             <option value="">Select…</option>
             <option value="ownership">Ownership — interested in buying a residence</option>
-            <option value="stay">Stay — interested in renting when open</option>
-            <option value="both">Both — owning and using it as a holiday home</option>
             <option value="info">Just information for now</option>
           </select>
         </div>
@@ -1930,13 +1916,13 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         <span>Facebook</span>
       </a>
-      <a href="mailto:stay@tornikview.com" aria-label="Email">
+      <a href="mailto:invest@tornikview.com" aria-label="Email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         <span>Email</span>
       </a>
     </div>
     <p class="footer-contact">
-      Kobilja Glava · Zlatibor · Serbia · <a href="mailto:stay@tornikview.com">stay@tornikview.com</a>
+      Kobilja Glava · Zlatibor · Serbia · <a href="mailto:invest@tornikview.com">invest@tornikview.com</a>
     </p>
     <div class="footer-links">
       <a href="/privacy.html">Privacy Policy</a>
@@ -1981,6 +1967,7 @@
           access_key: WEB3FORMS_ACCESS_KEY,
           subject: '🔔 New Email Signup — Tornik View',
           from_name: 'Tornik View Website',
+          replyto: email,
           form_type: 'Email Signup',
           email: email,
           botcheck: botcheck
@@ -2041,8 +2028,6 @@
       interestBtn.textContent = 'Sending...';
       const interestLabels = {
         ownership: 'Ownership — interested in buying a residence',
-        stay: 'Stay — interested in renting when open',
-        both: 'Both — owning and using it as a holiday home',
         info: 'Just information for now'
       };
       try {
@@ -2050,6 +2035,7 @@
           access_key: WEB3FORMS_ACCESS_KEY,
           subject: '✨ New Reservation Enquiry — ' + name,
           from_name: 'Tornik View Website',
+          replyto: formEmail,
           form_type: 'Reservation Enquiry',
           name: name, email: formEmail,
           phone: phone || '(not provided)',
