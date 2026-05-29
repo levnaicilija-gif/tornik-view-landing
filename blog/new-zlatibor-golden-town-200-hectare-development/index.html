@@ -691,6 +691,26 @@ a:hover { color: var(--gold-light); }
 </article>
 
 <style>
+.pdf-download{max-width:720px;margin:36px auto 0;padding:0 24px}
+.pdf-download a{display:flex;align-items:center;gap:18px;padding:20px 24px;border:1px solid rgba(212,168,87,.45);border-radius:14px;background:linear-gradient(135deg,rgba(212,168,87,.14),rgba(212,168,87,.04));text-decoration:none;transition:all .25s ease}
+.pdf-download a:hover{border-color:var(--gold,#D4A857);background:linear-gradient(135deg,rgba(212,168,87,.22),rgba(212,168,87,.07));transform:translateY(-1px)}
+.pdf-download .pdf-ic{font-size:1.7rem;line-height:1;flex-shrink:0}
+.pdf-download .pdf-tx{flex:1;min-width:0}
+.pdf-download .pdf-ti{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.45rem;line-height:1.15;color:var(--cream,#F5F1E8)}
+.pdf-download .pdf-su{display:block;font-family:'Inter',system-ui,sans-serif;font-size:.78rem;line-height:1.35;color:var(--gold-light,#E8B96A);letter-spacing:.02em;margin-top:3px}
+.pdf-download .pdf-go{font-family:'Inter',system-ui,sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold,#D4A857);white-space:nowrap;flex-shrink:0}
+@media(max-width:560px){.pdf-download a{flex-wrap:wrap;gap:12px}.pdf-download .pdf-go{width:100%}}
+</style>
+<div class="pdf-download">
+  <a href="/Tornik-View-Investment-Overview.pdf" download>
+    <span class="pdf-ic">&#128196;</span>
+    <span class="pdf-tx"><span class="pdf-ti">Investment Overview 2026</span><span class="pdf-su">Eight-page brochure &mdash; the project, the Zlatibor market and a conservative five-year model.</span></span>
+    <span class="pdf-go">Download PDF &rarr;</span>
+  </a>
+</div>
+
+
+<style>
 .related-reading { max-width: 720px; margin: 0 auto; padding: 0 24px 40px; }
 .related-reading .related-eyebrow { font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin: 0 0 18px; }
 .related-reading .related-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
