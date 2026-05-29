@@ -132,22 +132,41 @@ a:hover { color: var(--gold-light); }
 .site-nav a { color: var(--cream); }
 .site-nav a:hover { color: var(--gold); }
 .lang-switcher {
-  display: flex;
-  gap: 6px;
+  display: inline-flex;
+  gap: 4px;
   align-items: center;
-  font-size: 0.75rem;
+  background: rgba(245, 241, 232, 0.06);
+  padding: 4px;
+  border-radius: 100px;
+  border: 1px solid rgba(245, 241, 232, 0.12);
+}
+.lang-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.6;
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
-.lang-switcher a {
-  color: rgba(245, 241, 232, 0.55);
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: all 0.2s;
+.lang-link:hover { opacity: 1; background: rgba(245, 241, 232, 0.08); }
+.lang-link.active {
+  background: var(--gold);
+  color: var(--pine);
+  opacity: 1;
 }
-.lang-switcher a:hover, .lang-switcher a.active {
-  color: var(--gold);
+.lang-flag { display: inline-block; font-size: 0.9rem; line-height: 1; }
+@media (max-width: 600px) {
+  .lang-link { padding: 6px 9px; }
+  .lang-link .lang-label { display: none; }
 }
-.lang-switcher a.active { font-weight: 600; }
 
 .blog-hero {
   padding: 80px 24px 60px;
@@ -542,10 +561,10 @@ a:hover { color: var(--gold-light); }
       <a href="/ru/">Главная</a>
       <a href="/ru/blog/">Журнал</a>
       <a href="/ru/#interest">Резерв</a>
-      <div class="lang-switcher">
-        <a href="/blog/zlatibor-airport-2026-property-impact/">EN</a>
-        <a href="/sr/blog/zlatibor-aerodrom-2026-uticaj-na-nekretnine/">SR</a>
-        <a href="/ru/blog/aeroport-zlatibor-2026-vliyanie-na-nedvizhimost/" class="active">RU</a>
+      <div class="lang-switcher" role="group" aria-label="Language">
+        <a href="/blog/zlatibor-airport-2026-property-impact/" class="lang-link" hreflang="en"><span class="lang-flag">🇬🇧</span><span class="lang-label">EN</span></a>
+        <a href="/sr/blog/zlatibor-aerodrom-2026-uticaj-na-nekretnine/" class="lang-link" hreflang="sr"><span class="lang-flag">🇷🇸</span><span class="lang-label">SR</span></a>
+        <a href="/ru/blog/aeroport-zlatibor-2026-vliyanie-na-nedvizhimost/" class="lang-link active" hreflang="ru"><span class="lang-flag">🇷🇺</span><span class="lang-label">RU</span></a>
       </div>
     </nav>
   </div>
