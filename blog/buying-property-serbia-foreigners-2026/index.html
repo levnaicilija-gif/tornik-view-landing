@@ -782,6 +782,23 @@ a:hover { color: var(--gold-light); }
 
 </article>
 
+<style>
+.related-reading { max-width: 720px; margin: 0 auto; padding: 0 24px 40px; }
+.related-reading .related-eyebrow { font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin: 0 0 18px; }
+.related-reading .related-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.related-reading .related-list a { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 22px; border: 1px solid rgba(245, 241, 232, 0.12); border-radius: 10px; background: rgba(245, 241, 232, 0.03); color: var(--cream); text-decoration: none; font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; line-height: 1.3; transition: all 0.25s ease; }
+.related-reading .related-list a:hover { border-color: var(--gold); background: rgba(212, 168, 87, 0.06); }
+.related-reading .related-list .related-arrow { color: var(--gold); font-family: 'Inter', sans-serif; font-size: 1rem; flex-shrink: 0; }
+</style>
+<nav class="related-reading" aria-label="Related articles">
+  <p class="related-eyebrow">Continue reading</p>
+  <ul class="related-list">
+    <li><a href="/blog/zlatibor-roi-analysis-real-estate-investment-2026/"><span>Zlatibor property ROI — a 5-year conservative model</span><span class="related-arrow">&rarr;</span></a></li>
+    <li><a href="/blog/new-zlatibor-golden-town-200-hectare-development/"><span>New Zlatibor (Golden Town) — the 500-hectare project starting late 2026</span><span class="related-arrow">&rarr;</span></a></li>
+    <li><a href="/blog/zlatibor-airport-2026-property-impact/"><span>Zlatibor Airport 2026 — what it means for property values</span><span class="related-arrow">&rarr;</span></a></li>
+  </ul>
+</nav>
+
 <!-- ============ AUTHOR CARD ============ -->
 <div class="author-card">
   <div class="author-eyebrow">Compiled by</div>
