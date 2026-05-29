@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2D4A3E">
+  <meta name="robots" content="noindex, follow">
+  <title>Политика конфиденциальности и cookie &middot; Tornik View</title>
+  <meta name="description" content="Как Tornik View (RFBT Limited) собирает, использует и защищает ваши персональные данные, и как мы используем cookie и аналитику на tornikview.com.">
+  <link rel="canonical" href="https://tornikview.com/ru/privacy.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tornikview.com/ru/privacy.html">
+  <meta property="og:title" content="Политика конфиденциальности и cookie &mdash; Tornik View">
+  <meta property="og:description" content="Как мы обрабатываем ваши персональные данные на tornikview.com.">
+  <meta property="og:image" content="https://tornikview.com/clouds-hero.jpg">
+  <meta property="og:locale" content="ru_RU">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Политика конфиденциальности и cookie &mdash; Tornik View">
+  <meta name="twitter:description" content="Как мы обрабатываем ваши персональные данные на tornikview.com.">
+  <meta name="twitter:image" content="https://tornikview.com/clouds-hero.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { 'ad_storage': 'denied', 'analytics_storage': 'denied', 'wait_for_update': 500 });
+    if (localStorage.getItem('tv_cookie_consent') === 'accepted') gtag('consent', 'update', { 'analytics_storage': 'granted' });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4WTM5R9X"></script>
+  <script>gtag('js', new Date()); gtag('config', 'G-EX4WTM5R9X', { 'anonymize_ip': true });</script>
+
+  
+
+  <style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+:root {
+  --pine: #2D4A3E;
+  --pine-dark: #1a2e26;
+  --pine-light: #3d5447;
+  --cream: #F5F1E8;
+  --gold: #D4A857;
+  --gold-light: #E8B96A;
+  --slate: #1A1A1A;
+  --brown: #8a7250;
+}
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--pine);
+  color: var(--cream);
+  line-height: 1.7;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--gold); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--gold-light); }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(26, 46, 38, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 168, 87, 0.15);
+  padding: 18px 24px;
+}
+.site-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.site-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--cream);
+}
+.site-logo:hover { color: var(--gold); }
+.site-nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.site-nav a { color: var(--cream); }
+.site-nav a:hover { color: var(--gold); }
+.lang-switcher {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  background: rgba(245, 241, 232, 0.06);
+  padding: 4px;
+  border-radius: 100px;
+  border: 1px solid rgba(245, 241, 232, 0.12);
+}
+.lang-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.6;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.lang-link:hover { opacity: 1; background: rgba(245, 241, 232, 0.08); }
+.lang-link.active {
+  background: var(--gold);
+  color: var(--pine);
+  opacity: 1;
+}
+.lang-flag { display: inline-block; font-size: 0.9rem; line-height: 1; }
+@media (max-width: 600px) {
+  .lang-link { padding: 6px 9px; }
+  .lang-link .lang-label { display: none; }
+}
+
+.blog-hero {
+  padding: 80px 24px 60px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--pine-dark) 0%, var(--pine) 100%);
+}
+.blog-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--cream);
+}
+.blog-hero .eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.blog-hero .lede {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: rgba(245, 241, 232, 0.78);
+  max-width: 680px;
+  margin: 24px auto 0;
+  line-height: 1.5;
+}
+.blog-hero .meta {
+  margin-top: 32px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: rgba(245, 241, 232, 0.55);
+}
+
+.article-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+  font-size: 1.05rem;
+  color: rgba(245, 241, 232, 0.92);
+}
+.article-body h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  font-weight: 500;
+  color: var(--cream);
+  margin: 56px 0 20px;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--gold);
+  margin: 36px 0 14px;
+  letter-spacing: 0.01em;
+}
+.article-body p { margin: 0 0 20px; }
+.article-body ul, .article-body ol {
+  margin: 0 0 24px 1.5rem;
+  padding-left: 0.5rem;
+}
+.article-body li { margin-bottom: 10px; }
+.article-body strong { color: var(--cream); font-weight: 600; }
+.article-body em { color: var(--gold-light); font-style: italic; }
+.article-body blockquote {
+  margin: 32px 0;
+  padding: 20px 28px;
+  border-left: 3px solid var(--gold);
+  background: rgba(212, 168, 87, 0.06);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: rgba(245, 241, 232, 0.92);
+  line-height: 1.5;
+}
+.article-body .callout {
+  margin: 40px 0;
+  padding: 28px 32px;
+  background: rgba(26, 46, 38, 0.6);
+  border: 1px solid rgba(212, 168, 87, 0.25);
+  border-radius: 8px;
+}
+.article-body .callout h4 {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.article-body .callout p:last-child { margin-bottom: 0; }
+.article-body hr {
+  margin: 48px auto;
+  border: 0;
+  width: 80px;
+  border-top: 1px solid rgba(212, 168, 87, 0.4);
+}
+
+.author-card {
+  max-width: 720px;
+  margin: 48px auto 0;
+  padding: 32px;
+  background: rgba(26, 46, 38, 0.7);
+  border: 1px solid rgba(212, 168, 87, 0.2);
+  border-radius: 8px;
+  text-align: center;
+}
+.author-card .author-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.author-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+.author-card p {
+  color: rgba(245, 241, 232, 0.7);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-section {
+  max-width: 720px;
+  margin: 40px auto 0;
+  padding: 48px 32px;
+  background: linear-gradient(135deg, rgba(212, 168, 87, 0.1), rgba(212, 168, 87, 0.02));
+  border: 1px solid rgba(212, 168, 87, 0.3);
+  border-radius: 8px;
+  text-align: center;
+}
+.cta-section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--cream);
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+.cta-section p {
+  color: rgba(245, 241, 232, 0.8);
+  margin-bottom: 24px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--gold);
+  color: var(--pine-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.cta-btn:hover {
+  background: var(--gold-light);
+  color: var(--pine-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 168, 87, 0.3);
+}
+
+.blog-grid {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+.blog-card {
+  background: rgba(26, 46, 38, 0.6);
+  border: 1px solid rgba(212, 168, 87, 0.15);
+  border-radius: 8px;
+  padding: 32px;
+  transition: all 0.3s;
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 168, 87, 0.4);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+.blog-card .card-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.blog-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--cream);
+  margin-bottom: 16px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+.blog-card h3 a { color: var(--cream); }
+.blog-card h3 a:hover { color: var(--gold); }
+.blog-card .card-excerpt {
+  color: rgba(245, 241, 232, 0.7);
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+.blog-card .card-meta {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: rgba(245, 241, 232, 0.45);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blog-card .card-readmore {
+  color: var(--gold);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.coming-soon { opacity: 0.5; pointer-events: none; }
+.coming-soon h3 a { cursor: default; }
+
+.site-footer {
+  background: var(--pine-dark);
+  padding: 48px 24px 32px;
+  margin-top: 80px;
+  text-align: center;
+  border-top: 1px solid rgba(212, 168, 87, 0.15);
+}
+.site-footer .footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--cream);
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+  display: block;
+}
+.site-footer .footer-text {
+  color: rgba(245, 241, 232, 0.5);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+.site-footer .footer-meta {
+  color: rgba(245, 241, 232, 0.35);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--gold);
+  z-index: 200;
+  width: 0%;
+  transition: width 0.1s ease-out;
+}
+
+@media (max-width: 768px) {
+  .site-header { padding: 14px 18px; }
+  .site-nav { font-size: 0.72rem; gap: 16px; }
+  .site-logo { font-size: 1.2rem; }
+  .blog-hero { padding: 50px 18px 40px; }
+  .blog-hero .lede { font-size: 1.1rem; }
+  .article-body { padding: 40px 18px 60px; font-size: 1rem; }
+  .article-body h2 { margin: 40px 0 16px; }
+  .article-body blockquote { padding: 16px 20px; font-size: 1.1rem; }
+  .article-body .callout { padding: 22px 22px; }
+  .cta-section, .author-card { padding: 28px 22px; margin-left: 18px; margin-right: 18px; }
+  .blog-grid { padding: 0 18px; gap: 24px; }
+  .blog-card { padding: 24px; }
+}
+
+.sources-section {
+  max-width: 720px;
+  margin: 48px auto 0;
+  padding: 40px 36px;
+  background: rgba(26, 46, 38, 0.5);
+  border: 1px solid rgba(212, 168, 87, 0.15);
+  border-radius: 8px;
+}
+.sources-section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: var(--cream);
+  margin: 0 0 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.sources-section .sources-intro {
+  color: rgba(245, 241, 232, 0.7);
+  font-size: 0.92rem;
+  margin: 0 0 28px;
+  font-style: italic;
+}
+.sources-list {
+  list-style: decimal;
+  padding-left: 24px;
+  margin: 0;
+  color: rgba(245, 241, 232, 0.85);
+}
+.sources-list li {
+  margin-bottom: 22px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  padding-left: 8px;
+}
+.sources-list li strong {
+  color: var(--cream);
+  font-weight: 600;
+  display: inline-block;
+}
+.sources-list li em {
+  color: rgba(245, 241, 232, 0.6);
+  font-size: 0.86rem;
+  font-style: italic;
+}
+.sources-list li a {
+  color: var(--gold);
+  word-break: break-word;
+  font-size: 0.88rem;
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 168, 87, 0.3);
+  text-underline-offset: 3px;
+}
+.sources-list li a:hover {
+  color: var(--gold-light);
+  text-decoration-color: var(--gold-light);
+}
+.disclaimer-box {
+  max-width: 720px;
+  margin: 24px auto 0;
+  padding: 20px 28px;
+  background: rgba(26, 46, 38, 0.4);
+  border-left: 3px solid rgba(212, 168, 87, 0.5);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.85rem;
+  color: rgba(245, 241, 232, 0.6);
+  font-style: italic;
+  line-height: 1.6;
+}
+.last-updated {
+  max-width: 720px;
+  margin: 16px auto 0;
+  text-align: center;
+  font-size: 0.78rem;
+  color: rgba(245, 241, 232, 0.4);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .sources-section { padding: 28px 22px; margin-left: 18px; margin-right: 18px; }
+  .disclaimer-box, .last-updated { margin-left: 18px; margin-right: 18px; }
+}
+
+  </style>
+</head>
+<body>
+
+<div class="reading-progress" id="readingProgress"></div>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/ru/" class="site-logo">TORNIK VIEW</a>
+    <nav class="site-nav">
+      <a href="/ru/">Главная</a>
+      <a href="/ru/blog/">Журнал</a>
+      <a href="/ru/#interest">Резерв</a>
+      <div class="lang-switcher" role="group" aria-label="Language">
+        <a href="/privacy.html" class="lang-link" hreflang="en"><span class="lang-flag">🇬🇧</span><span class="lang-label">EN</span></a>
+        <a href="/sr/privacy.html" class="lang-link" hreflang="sr"><span class="lang-flag">🇷🇸</span><span class="lang-label">SR</span></a>
+        <a href="/ru/privacy.html" class="lang-link active" hreflang="ru"><span class="lang-flag">🇷🇺</span><span class="lang-label">RU</span></a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="eyebrow">Юридическое</div>
+  <h1>Политика конфиденциальности и cookie</h1>
+  <p class="lede">Как Tornik View обрабатывает ваши персональные данные, какие cookie мы используем и какие права у вас есть.</p>
+  <div class="meta">
+    <span>Tornik View &middot; RFBT Limited</span>
+    <span>&middot;</span>
+    <span>Последнее обновление: 29 мая 2026</span>
+  </div>
+</section>
+
+<article class="article-body">
+<p>Настоящая Политика конфиденциальности и использования файлов cookie объясняет, как Tornik View собирает, использует, передаёт и защищает ваши персональные данные при посещении сайта <strong>tornikview.com</strong> или при обращении к нам по поводу резиденций. Здесь также описаны файлы cookie и аналитика, которые мы используем, и права, которыми вы обладаете в отношении своих данных в соответствии с Общим регламентом ЕС по защите данных (GDPR) и аналогичными нормами.</p>
+
+<h2>Кто мы</h2>
+<p>Tornik View — это проект жилой застройки, которым управляет <strong>RFBT Limited</strong>, компания, зарегистрированная в Лондоне, Великобритания (юридический адрес: London WC2A 2JR). В соответствии с законодательством о защите данных, RFBT Limited является контролёром данных, ответственным за ваши персональные данные.</p>
+<p>По любым вопросам или запросам, связанным с конфиденциальностью, свяжитесь с нами по адресу <a href="mailto:invest@tornikview.com">invest@tornikview.com</a>.</p>
+
+<h2>Какие данные мы собираем</h2>
+<p><strong>Данные, которые вы предоставляете.</strong> Когда вы отправляете одну из наших контактных форм, мы собираем указанные вами данные — обычно имя, адрес электронной почты, номер телефона (если вы решите его указать), выбранный тип интереса (например, инвестиции или проживание) и содержание вашего сообщения.</p>
+<p><strong>Данные, собираемые автоматически.</strong> Если — и только если — вы примете аналитические файлы cookie, мы собираем ограниченные технические данные и данные об использовании через Google Analytics: просмотренные страницы, время на сайте, тип устройства и браузера, а также приблизительное анонимизированное местоположение, определённое по вашему IP-адресу. Анонимизация IP включена, и аналитика остаётся отключённой до получения вашего согласия (см. &laquo;Файлы cookie&raquo; ниже).</p>
+
+<h2>Файлы cookie и аналогичные технологии</h2>
+<p>Мы сводим использование файлов cookie к минимуму и делим их на две категории:</p>
+<ul>
+  <li><strong>Необходимые.</strong> Всегда активны и нужны для работы сайта и для запоминания вашего выбора о файлах cookie. Ваше решение хранится в браузере (значение под названием &laquo;tv_cookie_consent&raquo;), чтобы мы не спрашивали вас при каждом посещении. Они не отслеживают вас.</li>
+  <li><strong>Аналитические (необязательные, по умолчанию отключены).</strong> Мы используем Google Analytics 4 (идентификатор G-EX4WTM5R9X), чтобы понимать, как посетители используют сайт, и улучшать его. С помощью Google Consent Mode аналитическое хранилище <strong>по умолчанию отключено</strong> и включается только если вы выберете <strong>&laquo;Принять все&raquo;</strong> в нашем баннере cookie. Если вы выберете &laquo;Отклонить необязательные&raquo;, аналитические файлы cookie не устанавливаются.</li>
+</ul>
+<p>Мы не используем рекламные или маркетинговые файлы cookie и не позволяем третьим сторонам отслеживать вас на других сайтах. Вы можете отозвать согласие на аналитику в любое время, очистив данные сайта tornikview.com в вашем браузере, что сбросит ваш выбор.</p>
+
+<h2>Как мы используем ваши данные</h2>
+<ul>
+  <li>чтобы ответить на ваш запрос и предоставить информацию о резиденциях Tornik View;</li>
+  <li>чтобы связаться с вами по поводу выраженного вами интереса (например, детали инвестиций или наличие);</li>
+  <li>чтобы поддерживать, защищать и улучшать наш сайт и понимать, какой контент полезен (аналитика — только с согласия).</li>
+</ul>
+<p>Мы не будем отправлять вам не относящиеся к делу маркетинговые сообщения без чёткого основания, и любое такое сообщение всегда будет содержать способ отписаться.</p>
+
+<h2>Правовое основание обработки</h2>
+<p>В соответствии с GDPR мы опираемся на следующие правовые основания:</p>
+<ul>
+  <li><strong>Ваше согласие</strong> — для аналитических файлов cookie и любых необязательных маркетинговых сообщений. Согласие можно отозвать в любое время.</li>
+  <li><strong>Законные интересы / действия до заключения договора</strong> — чтобы ответить на ваш запрос и обработать его, который вы инициируете, связываясь с нами.</li>
+  <li><strong>Юридическая обязанность</strong> — когда мы обязаны хранить определённые записи для соблюдения применимого законодательства.</li>
+</ul>
+
+<h2>С кем мы делимся данными</h2>
+<p>Мы не продаём ваши персональные данные. Мы передаём их только поставщикам услуг, которые помогают нам управлять сайтом и отвечать вам, выступая в качестве наших обработчиков:</p>
+<ul>
+  <li><strong>Web3Forms</strong> — обрабатывает отправку наших контактных форм и доставляет их на нашу электронную почту.</li>
+  <li><strong>Google (Google Analytics)</strong> — предоставляет аналитику сайта, только после вашего согласия.</li>
+  <li><strong>Vercel</strong> — размещает и обслуживает сайт.</li>
+</ul>
+<p>Эти поставщики обрабатывают ваши данные исключительно по нашим инструкциям и в описанных здесь целях.</p>
+
+<h2>Международная передача данных</h2>
+<p>Некоторые поставщики услуг находятся за пределами Европейской экономической зоны (например, в США). При международной передаче данных мы опираемся на признанные механизмы защиты — такие как Стандартные договорные положения Европейской комиссии — для защиты вашей информации.</p>
+
+<h2>Сколько мы храним ваши данные</h2>
+<p>Данные запросов мы храним только столько, сколько необходимо для обработки вашего обращения и возникающих из него отношений, после чего они удаляются или анонимизируются. Аналитические данные хранятся в соответствии со стандартными настройками хранения Google Analytics.</p>
+
+<h2>Ваши права</h2>
+<p>В соответствии с GDPR и аналогичными нормами вы имеете право:</p>
+<ul>
+  <li>получить доступ к персональным данным, которые мы храним о вас;</li>
+  <li>попросить исправить неточные или неполные данные;</li>
+  <li>попросить удалить ваши данные (&laquo;право на забвение&raquo;);</li>
+  <li>ограничить обработку или возразить против неё;</li>
+  <li>получить ваши данные в переносимом формате;</li>
+  <li>отозвать согласие в любое время без ущерба для предшествующей законной обработки.</li>
+</ul>
+<p>Чтобы воспользоваться любым из этих прав, напишите нам на <a href="mailto:invest@tornikview.com">invest@tornikview.com</a>. Вы также имеете право подать жалобу в надзорный орган — в Сербии это Уполномоченный по информации общественного значения и защите персональных данных; в Великобритании — Управление комиссара по информации (ICO); или ваш местный орган в ЕЭЗ.</p>
+
+<h2>Дети</h2>
+<p>Этот сайт не предназначен для детей, и мы сознательно не собираем персональные данные лиц младше 16 лет.</p>
+
+<h2>Безопасность</h2>
+<p>Мы принимаем разумные технические и организационные меры для защиты ваших персональных данных. Однако ни один метод передачи или хранения данных через интернет не является полностью безопасным, и мы не можем гарантировать абсолютную безопасность.</p>
+
+<h2>Изменения в этой политике</h2>
+<p>Мы можем время от времени обновлять эту политику. Все изменения будут опубликованы на этой странице с обновлённой датой &laquo;последнего обновления&raquo;.</p>
+
+<h2>Контакт</h2>
+<p>Tornik View — RFBT Limited, Лондон, Великобритания.<br>Эл. почта: <a href="mailto:invest@tornikview.com">invest@tornikview.com</a></p>
+</article>
+
+<footer class="site-footer">
+  <a href="/ru/" class="footer-logo">TORNIK VIEW</a>
+  <p class="footer-text">Восемь частных триплексов в Кобилья Глава, Златибор. Между лыжными склонами Торника и рекой Црни Рзав. Открытие зимой 2026.</p>
+  <p class="footer-meta">Kobilja Glava · Zlatibor · Serbia · <a href="mailto:invest@tornikview.com">invest@tornikview.com</a></p>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const winHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = (window.scrollY / winHeight) * 100;
+  document.getElementById('readingProgress').style.width = scrolled + '%';
+});
+</script>
+
+
+<script defer src="/cookie-consent.js"></script>
+</body>
+</html>
